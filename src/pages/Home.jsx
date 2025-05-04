@@ -79,7 +79,7 @@ export default function Home() {
           <div className="mode-section" id="skyblock">
             <div className="carousel">
               <button className="prev" onClick={prevImage}>◀</button>
-              <img src={images[imageIndex]} alt="Skyblock" />
+              <img src="/images/banner.jpg" alt="Skyblock" />
               <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
