@@ -5,9 +5,9 @@ export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
 
   const images = [
-    '/images/banner.jpg',
-    '/images/banner2.jpg',
-    '/images/banner3.jpg',
+    '../images/banner.jpg',
+    '../images/banner2.jpg',
+    '../images/banner3.jpg',
   ];
   
 
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="mode-section" id="skyblock">
             <div className="carousel">
               <button className="prev" onClick={prevImage}>◀</button>
-              <img src="/images/banner.jpg" alt="Skyblock" />
+              <img src={images[imageIndex]} alt="Skyblock" />
               <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
