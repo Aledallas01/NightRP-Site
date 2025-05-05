@@ -1,31 +1,31 @@
+// src/pages/Home.jsx
 import React, { useState } from 'react';
-import Banner1 from "/images/banner"
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
   const [imageIndex, setImageIndex] = useState(0);
 
+  // Usa percorsi assoluti a partire da public/
   const images = [
-    '{Banner1}',
-    '{Banner2}',
-    '{Banner3}',
+    '/images/Aledallas.png',
+    '/images/banner2.jpg',
+    '/images/banner3.jpg',
   ];
-  
 
   const copiaIP = () => {
-    navigator.clipboard.writeText('play.nightrp.it'); // Sostituisci con l'IP effettivo
+    navigator.clipboard.writeText('play.nightrp.it');
     setIpButtonText('IP copiato!');
     setTimeout(() => {
-      setIpButtonText('Copia IP'); // Torna al testo originale dopo 3 secondi
+      setIpButtonText('Copia IP');
     }, 3000);
   };
 
   const nextImage = () => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Ciclo tra le immagini
+    setImageIndex((prev) => (prev + 1) % images.length);
   };
 
   const prevImage = () => {
-    setImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length); // Ciclo tra le immagini
+    setImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
@@ -37,8 +37,11 @@ export default function Home() {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       />
-      <link rel="stylesheet" href="../CSS/style.css" />
+      {/* se il tuo style.css è in public/CSS */}
+      <link rel="stylesheet" href="/CSS/style.css" />
+
       <div id="header-placeholder" />
+
       <main>
         {/* Hero */}
         <section id="home" className="hero">
@@ -59,7 +62,7 @@ export default function Home() {
             </button>
             <button
               type="button"
-              onClick={() => window.location.href = 'games'}
+              onClick={() => window.location.href = 'games.html'}
               className="btn"
             >
               <i className="fas fa-gamepad" /> Scopri le Modalità
@@ -73,9 +76,11 @@ export default function Home() {
             </button>
           </div>
         </section>
+
         {/* Modalità */}
         <section id="modalita">
           <h2 className="section-title">Le Nostre Modalità</h2>
+
           {/* Skyblock */}
           <div className="mode-section" id="skyblock">
             <div className="carousel">
@@ -93,6 +98,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           {/* KitPvP */}
           <div className="mode-section" id="kitpvp">
             <div className="carousel">
@@ -110,6 +116,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           {/* Prison */}
           <div className="mode-section" id="prison">
             <div className="carousel">
@@ -127,6 +134,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           {/* Roleplay */}
           <div className="mode-section" id="roleplay">
             <div className="carousel">
@@ -145,6 +153,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* Community & Supporto */}
         <section id="community" className="extra-section">
           <h2 className="section-title">Community &amp; Supporto</h2>
@@ -168,6 +177,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* FOOTER */}
         <div id="footer-placeholder" />
       </main>
