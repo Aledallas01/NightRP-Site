@@ -5,7 +5,7 @@ export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
 
   const images = [
-    '../images/banner.jpg',
+    '../images/team/Aledallas.png',
     '../images/banner2.jpg',
     '../images/banner3.jpg',
   ];
