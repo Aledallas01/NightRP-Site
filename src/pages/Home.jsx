@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
+
+  const copiaIP = () => {
+    navigator.clipboard.writeText('play.nightrp.it'); // Sostituisci con l'IP effettivo
+    setIpButtonText('IP copiato!');
+    setTimeout(() => {
+      setIpButtonText('Copia IP'); // Torna al testo originale dopo 3 secondi
+    }, 3000);
+  };
   
 
   return (
