@@ -7,9 +7,9 @@ export default function Home() {
 
   // Usa percorsi assoluti a partire da public/
   const images = [
-    '/images/Aledallas.png',
-    '/images/banner2.jpg',
-    '/images/banner3.jpg',
+    '../images/Aledallas.png',
+    '../images/banner2.jpg',
+    '../images/banner3.jpg',
   ];
 
   const copiaIP = () => {
