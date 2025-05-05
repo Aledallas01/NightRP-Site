@@ -1,16 +1,15 @@
 // src/pages/Home.jsx
+
 import React, { useState } from 'react';
+import img1 from '../assets/images/Aledallas.png';
+import img2 from '../assets/images/banner2.jpg';
+import img3 from '../assets/images/banner3.jpg';
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
   const [imageIndex, setImageIndex] = useState(0);
 
-  // Usa percorsi assoluti a partire da public/
-  const images = [
-    '../images/Aledallas.png',
-    '../images/banner2.jpg',
-    '../images/banner3.jpg',
-  ];
+  const images = [img1, img2, img3];
 
   const copiaIP = () => {
     navigator.clipboard.writeText('play.nightrp.it');
@@ -30,15 +29,16 @@ export default function Home() {
 
   return (
     <>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Home - NightRP Minecraft Server</title>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      />
-      {/* se il tuo style.css è in public/CSS */}
-      <link rel="stylesheet" href="/CSS/style.css" />
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home - NightRP Minecraft Server</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/CSS/style.css" />
+      </head>
 
       <div id="header-placeholder" />
 
@@ -52,24 +52,19 @@ export default function Home() {
             costruttore, un guerriero o un attore, qui troverai la tua casa.
           </p>
           <div className="hero-buttons">
-            <button
-              type="button"
-              onClick={copiaIP}
-              className="btn"
-              id="copy-ip-btn"
-            >
+            <button onClick={copiaIP} className="btn" id="copy-ip-btn">
               <i className="fas fa-copy" /> {ipButtonText}
             </button>
             <button
-              type="button"
-              onClick={() => window.location.href = 'games.html'}
+              onClick={() => (window.location.href = 'games.html')}
               className="btn"
             >
               <i className="fas fa-gamepad" /> Scopri le Modalità
             </button>
             <button
-              type="button"
-              onClick={() => window.open('https://discord.gg/2xQSRYSRjH','_blank')}
+              onClick={() =>
+                window.open('https://discord.gg/2xQSRYSRjH', '_blank')
+              }
               className="btn"
             >
               <i className="fab fa-discord" /> Entra nel Discord
@@ -84,16 +79,20 @@ export default function Home() {
           {/* Skyblock */}
           <div className="mode-section" id="skyblock">
             <div className="carousel">
-              <button className="prev" onClick={prevImage}>◀</button>
+              <button className="prev" onClick={prevImage}>
+                ◀
+              </button>
               <img src={images[imageIndex]} alt="Skyblock" />
-              <button className="next" onClick={nextImage}>▶</button>
+              <button className="next" onClick={nextImage}>
+                ▶
+              </button>
             </div>
             <div className="mode-text">
               <h2>Skyblock</h2>
               <p>
                 Inizia con un solo blocco sospeso nel vuoto e costruisci la tua
-                isola da zero. Affronta sfide settimanali, automatizza le risorse e
-                scala le classifiche. Con sistemi di upgrade, negozi e missioni
+                isola da zero. Affronta sfide settimanali, automatizza le risorse
+                e scala le classifiche. Con sistemi di upgrade, negozi e missioni
                 dedicate, ogni isola racconta una storia diversa.
               </p>
             </div>
@@ -102,17 +101,21 @@ export default function Home() {
           {/* KitPvP */}
           <div className="mode-section" id="kitpvp">
             <div className="carousel">
-              <button className="prev" onClick={prevImage}>◀</button>
+              <button className="prev" onClick={prevImage}>
+                ◀
+              </button>
               <img src={images[imageIndex]} alt="KitPvP" />
-              <button className="next" onClick={nextImage}>▶</button>
+              <button className="next" onClick={nextImage}>
+                ▶
+              </button>
             </div>
             <div className="mode-text">
               <h2>KitPvP OP</h2>
               <p>
                 Entra nell’arena, scegli il tuo kit e combatti per la gloria. Il
                 nostro KitPvP offre un PvP fluido, arene uniche, classifiche
-                giornaliere e ricompense leggendarie. Allenati, partecipa ai tornei
-                e dimostra chi è il più forte.
+                giornaliere e ricompense leggendarie. Allenati, partecipa ai
+                tornei e dimostra chi è il più forte.
               </p>
             </div>
           </div>
@@ -120,9 +123,13 @@ export default function Home() {
           {/* Prison */}
           <div className="mode-section" id="prison">
             <div className="carousel">
-              <button className="prev" onClick={prevImage}>◀</button>
+              <button className="prev" onClick={prevImage}>
+                ◀
+              </button>
               <img src={images[imageIndex]} alt="Prison" />
-              <button className="next" onClick={nextImage}>▶</button>
+              <button className="next" onClick={nextImage}>
+                ▶
+              </button>
             </div>
             <div className="mode-text">
               <h2>Prison</h2>
@@ -138,15 +145,19 @@ export default function Home() {
           {/* Roleplay */}
           <div className="mode-section" id="roleplay">
             <div className="carousel">
-              <button className="prev" onClick={prevImage}>◀</button>
+              <button className="prev" onClick={prevImage}>
+                ◀
+              </button>
               <img src={images[imageIndex]} alt="Roleplay" />
-              <button className="next" onClick={nextImage}>▶</button>
+              <button className="next" onClick={nextImage}>
+                ▶
+              </button>
             </div>
             <div className="mode-text">
               <h2>Roleplay</h2>
               <p>
-                Vivi una vita alternativa in città realistiche, con leggi, ruoli e
-                interazioni reali. Interpreta un personaggio unico, entra in una
+                Vivi una vita alternativa in città realistiche, con leggi, ruoli
+                e interazioni reali. Interpreta un personaggio unico, entra in una
                 fazione o crea la tua. Ogni giorno è una nuova storia da scrivere
                 insieme agli altri giocatori.
               </p>
@@ -178,7 +189,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FOOTER */}
+        {/* Footer Placeholder */}
         <div id="footer-placeholder" />
       </main>
     </>
