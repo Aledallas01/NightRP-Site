@@ -20,16 +20,16 @@ export default function Navbar() {
         </a>
         <ul className="dropdown-content">
           <li>
-            <a href="games.html#skyblock">Skyblock</a>
+            <a href="games#skyblock">Skyblock</a>
           </li>
           <li>
-            <a href="games.html#kitpvp">KitPvP OP</a>
+            <a href="games#kitpvp">KitPvP OP</a>
           </li>
           <li>
-            <a href="games.html#prison">Prison</a>
+            <a href="games#prison">Prison</a>
           </li>
           <li>
-            <a href="games.html#roleplay">Roleplay</a>
+            <a href="games#roleplay">Roleplay</a>
           </li>
         </ul>
       </li>
