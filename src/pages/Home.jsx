@@ -62,7 +62,7 @@ export default function Home() {
             </button>
             <button
               type="button"
-              onClick={() => window.location.href = 'games.html'}
+              onClick={() => window.location.href = 'games'}
               className="btn"
             >
               <i className="fas fa-gamepad" /> Scopri le Modalità
