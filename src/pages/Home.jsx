@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Banner1 from "/images/banner"
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
