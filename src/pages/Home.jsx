@@ -2,30 +2,7 @@ import React, { useState } from 'react';
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
-  const [imageIndex, setImageIndex] = useState(0);
-
-  const images = [
-    '../images/team/Aledallas.png',
-    '../images/banner2.jpg',
-    '../images/banner3.jpg',
-  ];
   
-
-  const copiaIP = () => {
-    navigator.clipboard.writeText('play.nightrp.it'); // Sostituisci con l'IP effettivo
-    setIpButtonText('IP copiato!');
-    setTimeout(() => {
-      setIpButtonText('Copia IP'); // Torna al testo originale dopo 3 secondi
-    }, 3000);
-  };
-
-  const nextImage = () => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Ciclo tra le immagini
-  };
-
-  const prevImage = () => {
-    setImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length); // Ciclo tra le immagini
-  };
 
   return (
     <>
@@ -79,7 +56,7 @@ export default function Home() {
           <div className="mode-section" id="skyblock">
             <div className="carousel">
               <button className="prev" onClick={prevImage}>◀</button>
-              <img src={images[imageIndex]} alt="Skyblock" />
+              <img src="../images/team/Aledallas.png" alt="Skyblock" />
               <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
