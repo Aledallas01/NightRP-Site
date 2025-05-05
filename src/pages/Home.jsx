@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const images = [
+    '../images/banner.jpg',
+    '../images/banner2.jpg',
+    '../images/banner3.jpg',
+  ];
+  
 
   const copiaIP = () => {
     navigator.clipboard.writeText('play.nightrp.it'); // Sostituisci con l'IP effettivo
@@ -10,7 +18,14 @@ export default function Home() {
       setIpButtonText('Copia IP'); // Torna al testo originale dopo 3 secondi
     }, 3000);
   };
-  
+
+  const nextImage = () => {
+    setImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Ciclo tra le immagini
+  };
+
+  const prevImage = () => {
+    setImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length); // Ciclo tra le immagini
+  };
 
   return (
     <>
@@ -63,7 +78,9 @@ export default function Home() {
           {/* Skyblock */}
           <div className="mode-section" id="skyblock">
             <div className="carousel">
-              <img src="../images/team/Aledallas.png" alt="Skyblock" />
+              <button className="prev" onClick={prevImage}>◀</button>
+              <img src={images[imageIndex]} alt="Skyblock" />
+              <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
               <h2>Skyblock</h2>
@@ -78,7 +95,9 @@ export default function Home() {
           {/* KitPvP */}
           <div className="mode-section" id="kitpvp">
             <div className="carousel">
-              <img src="../images/team/Aledallas.png" alt="KitPvP" />
+              <button className="prev" onClick={prevImage}>◀</button>
+              <img src={images[imageIndex]} alt="KitPvP" />
+              <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
               <h2>KitPvP OP</h2>
@@ -93,7 +112,9 @@ export default function Home() {
           {/* Prison */}
           <div className="mode-section" id="prison">
             <div className="carousel">
-              <img src="../images/team/Aledallas.png" alt="Prison" />
+              <button className="prev" onClick={prevImage}>◀</button>
+              <img src={images[imageIndex]} alt="Prison" />
+              <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
               <h2>Prison</h2>
@@ -108,7 +129,9 @@ export default function Home() {
           {/* Roleplay */}
           <div className="mode-section" id="roleplay">
             <div className="carousel">
-              <img src="../images/team/Aledallas.png" alt="Roleplay" />
+              <button className="prev" onClick={prevImage}>◀</button>
+              <img src={images[imageIndex]} alt="Roleplay" />
+              <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
               <h2>Roleplay</h2>
