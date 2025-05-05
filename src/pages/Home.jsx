@@ -73,7 +73,7 @@ export default function Home() {
           <div className="mode-section" id="kitpvp">
             <div className="carousel">
               <button className="prev" onClick={prevImage}>◀</button>
-              <img src={images[imageIndex]} alt="KitPvP" />
+              <img src="../images/team/Aledallas.png" alt="KitPvP" />
               <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="mode-section" id="prison">
             <div className="carousel">
               <button className="prev" onClick={prevImage}>◀</button>
-              <img src={images[imageIndex]} alt="Prison" />
+              <img src="../images/team/Aledallas.png" alt="Prison" />
               <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="mode-section" id="roleplay">
             <div className="carousel">
               <button className="prev" onClick={prevImage}>◀</button>
-              <img src={images[imageIndex]} alt="Roleplay" />
+              <img src="../images/team/Aledallas.png" alt="Roleplay" />
               <button className="next" onClick={nextImage}>▶</button>
             </div>
             <div className="mode-text">
