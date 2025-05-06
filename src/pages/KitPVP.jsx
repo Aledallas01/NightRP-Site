@@ -1,4 +1,5 @@
 // src/pages/KitPVP.jsx
+
 import React from 'react';
 
 export default function KitPVP() {
@@ -26,22 +27,22 @@ export default function KitPVP() {
               <i className="fas fa-crosshairs"></i> KitPvP OP
             </h1>
             <p className="mode-intro">
-              Entra nell’arena, scegli il tuo kit e combatti per la gloria. KitPvP
-              offre combattimenti rapidi, respawn istantaneo e mappe dinamiche:
-              dimostra chi è il più forte!
+            Entra nell'arena e affronta altri giocatori con equipaggiamenti potenziati.
+            Scegli tra una varietà di kit personalizzati, guadagna ricompense attraverso killstreaks e scala le classifiche PvP.
+            Con arene dinamiche e un sistema di progressione unico, ogni battaglia è una nuova sfida.
             </p>
 
             <div className="image-gallery">
               <img
-                src="/images/KitPVP/kitpvp1.jpg"
+                src="../assets/images/KitPVP/banner1.jpg"
                 alt="KitPvP Screenshot 1"
               />
               <img
-                src="/images/KitPVP/kitpvp2.jpg"
+                src="../assets/images/KitPVP/banner.jpg"
                 alt="KitPvP Screenshot 2"
               />
               <img
-                src="/images/KitPVP/kitpvp3.jpg"
+                src="../assets/images/KitPVP/banner.jpg"
                 alt="KitPvP Screenshot 3"
               />
             </div>
