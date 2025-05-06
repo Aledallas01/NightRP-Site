@@ -33,15 +33,15 @@ export default function Skyblock() {
 
             <div className="image-gallery">
               <img
-                src="/images/SkyBlock/banner1.jpg"
+                src="../assets/images/banner1.jpg"
                 alt="Skyblock Screenshot 1"
               />
               <img
-                src="/images/SkyBlock/banner2.jpg"
+                src="../assets/images/banner2.jpg"
                 alt="Skyblock Screenshot 2"
               />
               <img
-                src="/images/SkyBlock/banner3.jpg"
+                src="../assets/images/banner3.jpg"
                 alt="Skyblock Screenshot 3"
               />
             </div>
