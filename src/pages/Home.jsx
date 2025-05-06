@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 
 import React, { useState } from 'react';
-import img1 from '../assets/images/Aledallas.png';
+import img1 from '../assets/images/banner.png';
 import img2 from '../assets/images/banner2.jpg';
 import img3 from '../assets/images/banner3.jpg';
 
