@@ -811,3 +811,16 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1.3s ease;
   }
+
+.image-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
