@@ -10,6 +10,7 @@ import Prison from './pages/Prison.jsx';
 import Roleplay from './pages/Roleplay.jsx';
 import Forum from './pages/Forum.jsx';
 import Store from './pages/Store.jsx';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   return (
