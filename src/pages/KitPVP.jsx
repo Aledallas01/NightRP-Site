@@ -1,24 +1,53 @@
-export default function KitPvP() {
-    return (
-      <section className="p-8">
-        <h1 className="text-4xl font-bold text-primary mb-4">KitPvP</h1>
-        <p className="text-gray-300 mb-6">Combatti in arena e scala la classifica kill.</p>
-        {/* Tabella Top 5 kill */}
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-left bg-gray-800 rounded-lg overflow-hidden">
-            <thead className="bg-primary">
-              <tr>
-                <th className="px-4 py-2">Pos</th>
-                <th className="px-4 py-2">Giocatore</th>
-                <th className="px-4 py-2">Kill</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Popolerai via JS */}
-            </tbody>
-          </table>
-        </div>
-      </section>
-    );
-  }
-  
+// src/pages/KitPVP.jsx
+import React from 'react';
+
+export default function KitPVP() {
+  return (
+    <>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KitPvP – NightRP Minecraft Server</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/CSS/style.css" />
+      </head>
+
+      {/* HEADER */}
+      <div id="header-placeholder" />
+
+      {/* MAIN */}
+      <main>
+        <section id="kitpvp-page" className="mode-details mode-card alt">
+          <div className="container">
+            <h1 className="section-title">
+              <i className="fas fa-crosshairs"></i> KitPvP OP
+            </h1>
+            <p className="mode-intro">
+              Entra nell’arena, scegli il tuo kit e combatti per la gloria. KitPvP
+              offre combattimenti rapidi, respawn istantaneo e mappe dinamiche:
+              dimostra chi è il più forte!
+            </p>
+
+            <div className="image-gallery">
+              <img
+                src="/images/KitPVP/kitpvp1.jpg"
+                alt="KitPvP Screenshot 1"
+              />
+              <img
+                src="/images/KitPVP/kitpvp2.jpg"
+                alt="KitPvP Screenshot 2"
+              />
+              <img
+                src="/images/KitPVP/kitpvp3.jpg"
+                alt="KitPvP Screenshot 3"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
