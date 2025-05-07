@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.jpg';
 
 export default function Navbar() {
   return (
 <header>
   <div className="logo">
-    <img src="/../src/assets/images/logo.jpg" alt="Logo NightRP" />
+    <img src={logo} alt="Logo NightRP" />
     <h2>NightRP</h2>
   </div>
   <nav>
