@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
 <header>
   <div className="logo">
-    <img src="../../images/logo.jpg" alt="Logo NightRP" />
+    <img src="../assets/images/logo.jpg" alt="Logo NightRP" />
     <h2>NightRP</h2>
   </div>
   <nav>
