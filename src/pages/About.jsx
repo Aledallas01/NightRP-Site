@@ -105,7 +105,7 @@ export default function About() {
           </div>
           <div className="staff-card">
             <div className="avatar">
-              <img src="../images/team/Aledallas.png" alt="Staff 2" />
+              <img src="../assets/images/team/Aledallas.png" alt="Staff 2" />
             </div>
             <h3>Aledallas</h3>
             <p>Web Developer</p>
