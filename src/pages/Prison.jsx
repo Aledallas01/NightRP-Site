@@ -1,6 +1,9 @@
 // src/pages/Prison.jsx
 
 import React from 'react';
+import img1 from '../assets/images/Prison/banner1.jpg';
+import img2 from '../assets/images/Prison/banner2.jpg';
+import img3 from '../assets/images/Prison/banner3.jpg';
 
 export default function Prison() {
   return (
@@ -34,15 +37,15 @@ export default function Prison() {
 
             <div className="image-gallery">
               <img
-                src="../assets/images/Prison/banner1.jpg"
+                src={img1}
                 alt="Prison Screenshot 1"
               />
               <img
-                src="../assets/images/Prison/banner2.jpg"
+                src={img2}
                 alt="Prison Screenshot 2"
               />
               <img
-                src="../assets/images/Prison/banner3.jpg"
+                src={img3}
                 alt="Prison Screenshot 3"
               />
             </div>

@@ -1,6 +1,9 @@
 // src/pages/Skyblock.jsx
 
 import React from 'react';
+import img1 from '../assets/images/SkyBlock/banner1.jpg';
+import img2 from '../assets/images/SkyBlock/banner2.jpg';
+import img3 from '../assets/images/SkyBlock/banner3.jpg';
 
 export default function Skyblock() {
   return (
@@ -34,15 +37,15 @@ export default function Skyblock() {
 
             <div className="image-gallery">
               <img
-                src="../assets/images/SkyBlock/banner1.jpg"
+                src={img1}
                 alt="Skyblock Screenshot 1"
               />
               <img
-                src="../assets/images/SkyBlock/banner2.jpg"
+                src={img2}
                 alt="Skyblock Screenshot 2"
               />
               <img
-                src="../assets/images/SkyBlock/banner3.jpg"
+                src={img3}
                 alt="Skyblock Screenshot 3"
               />
             </div>

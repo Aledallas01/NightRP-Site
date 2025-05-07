@@ -1,6 +1,9 @@
 // src/pages/KitPVP.jsx
 
 import React from 'react';
+import img1 from '../assets/images/KitPVP/banner1.jpg';
+import img2 from '../assets/images/KitPVP/banner2.jpg';
+import img3 from '../assets/images/KitPVP/banner3.jpg';
 
 export default function KitPVP() {
   return (
@@ -34,15 +37,15 @@ export default function KitPVP() {
 
             <div className="image-gallery">
               <img
-                src="../assets/images/KitPVP/banner1.jpg"
+                src={img1}
                 alt="KitPvP Screenshot 1"
               />
               <img
-                src="../assets/images/KitPVP/banner.jpg"
+                src={img2}
                 alt="KitPvP Screenshot 2"
               />
               <img
-                src="../assets/images/KitPVP/banner.jpg"
+                src={img3}
                 alt="KitPvP Screenshot 3"
               />
             </div>
