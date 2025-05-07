@@ -1,30 +1,18 @@
 // src/pages/Home.jsx
 
 import React, { useState } from 'react';
-import img1 from '../assets/images/banner.jpg';
-import img2 from '../assets/images/banner2.jpg';
-import img3 from '../assets/images/banner3.jpg';
+import skyImg from '../assets/images/SkyBlock/banner.jpg';
+import kitImg from '../assets/images/KitPVP/banner.jpg';
+import prisonImg from '../assets/images/Prison/banner.jpg';
+import roleImg from '../assets/images/RolePlay/banner.jpg';
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState('Copia IP');
-  const [imageIndex, setImageIndex] = useState(0);
-
-  const images = [img1, img2, img3];
 
   const copiaIP = () => {
     navigator.clipboard.writeText('play.nightrp.it');
     setIpButtonText('IP copiato!');
-    setTimeout(() => {
-      setIpButtonText('Copia IP');
-    }, 3000);
-  };
-
-  const nextImage = () => {
-    setImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    setTimeout(() => setIpButtonText('Copia IP'), 3000);
   };
 
   return (
@@ -52,7 +40,7 @@ export default function Home() {
             costruttore, un guerriero o un attore, qui troverai la tua casa.
           </p>
           <div className="hero-buttons">
-            <button onClick={copiaIP} className="btn" id="copy-ip-btn">
+            <button onClick={copiaIP} className="btn">
               <i className="fas fa-copy" /> {ipButtonText}
             </button>
             <button
@@ -77,17 +65,8 @@ export default function Home() {
           <h2 className="section-title">Le Nostre Modalità</h2>
 
           {/* Skyblock */}
-          <div className="mode-section" id="skyblock">
-            <div className="carousel">
-              <button className="prev" onClick={prevImage}>
-                ◀
-              </button>
-              <img src={images[imageIndex]} alt="Skyblock" />
-              <button className="next" onClick={nextImage}>
-                ▶
-              </button>
-            </div>
-            <div className="mode-text">
+          <div className="mode-section flex flex-col md:flex-row items-center">
+            <div className="mode-text md:w-1/2">
               <h2>Skyblock</h2>
               <p>
                 Inizia con un solo blocco sospeso nel vuoto e costruisci la tua
@@ -96,20 +75,18 @@ export default function Home() {
                 dedicate, ogni isola racconta una storia diversa.
               </p>
             </div>
+            <div className="mode-image md:w-1/2">
+              <img
+                src={skyImg}
+                alt="Skyblock"
+                className="w-full rounded-lg mt-4 md:mt-0"
+              />
+            </div>
           </div>
 
           {/* KitPvP */}
-          <div className="mode-section" id="kitpvp">
-            <div className="carousel">
-              <button className="prev" onClick={prevImage}>
-                ◀
-              </button>
-              <img src={images[imageIndex]} alt="KitPvP" />
-              <button className="next" onClick={nextImage}>
-                ▶
-              </button>
-            </div>
-            <div className="mode-text">
+          <div className="mode-section flex flex-col md:flex-row items-center">
+            <div className="mode-text md:w-1/2">
               <h2>KitPvP OP</h2>
               <p>
                 Entra nell’arena, scegli il tuo kit e combatti per la gloria. Il
@@ -118,42 +95,38 @@ export default function Home() {
                 tornei e dimostra chi è il più forte.
               </p>
             </div>
+            <div className="mode-image md:w-1/2">
+              <img
+                src={kitImg}
+                alt="KitPvP"
+                className="w-full rounded-lg mt-4 md:mt-0"
+              />
+            </div>
           </div>
 
           {/* Prison */}
-          <div className="mode-section" id="prison">
-            <div className="carousel">
-              <button className="prev" onClick={prevImage}>
-                ◀
-              </button>
-              <img src={images[imageIndex]} alt="Prison" />
-              <button className="next" onClick={nextImage}>
-                ▶
-              </button>
-            </div>
-            <div className="mode-text">
+          <div className="mode-section flex flex-col md:flex-row items-center">
+            <div className="mode-text md:w-1/2">
               <h2>Prison</h2>
               <p>
                 Da prigioniero a magnate: scava, commercia, investi. Prison è la
                 modalità perfetta per chi ama la progressione continua. Ranka,
-                sblocca nuove aree, costruisci il tuo impero e domina l’economia
-                della prigione.
+                sblocca nuove aree, costruisci il tuo impero e domina
+                l’economia della prigione.
               </p>
+            </div>
+            <div className="mode-image md:w-1/2">
+              <img
+                src={prisonImg}
+                alt="Prison"
+                className="w-full rounded-lg mt-4 md:mt-0"
+              />
             </div>
           </div>
 
           {/* Roleplay */}
-          <div className="mode-section" id="roleplay">
-            <div className="carousel">
-              <button className="prev" onClick={prevImage}>
-                ◀
-              </button>
-              <img src={images[imageIndex]} alt="Roleplay" />
-              <button className="next" onClick={nextImage}>
-                ▶
-              </button>
-            </div>
-            <div className="mode-text">
+          <div className="mode-section flex flex-col md:flex-row items-center">
+            <div className="mode-text md:w-1/2">
               <h2>Roleplay</h2>
               <p>
                 Vivi una vita alternativa in città realistiche, con leggi, ruoli
@@ -161,6 +134,13 @@ export default function Home() {
                 fazione o crea la tua. Ogni giorno è una nuova storia da scrivere
                 insieme agli altri giocatori.
               </p>
+            </div>
+            <div className="mode-image md:w-1/2">
+              <img
+                src={roleImg}
+                alt="Roleplay"
+                className="w-full rounded-lg mt-4 md:mt-0"
+              />
             </div>
           </div>
         </section>
@@ -176,9 +156,9 @@ export default function Home() {
                 chiacchierare.
               </p>
               <p>
-                Il nostro staff è disponibile ogni giorno per risolvere problemi
-                tecnici, moderare l'ambiente di gioco e assicurarsi che tutti si
-                divertano nel rispetto delle regole.
+                Il nostro staff è disponibile ogni giorno per risolvere
+                problemi tecnici, moderare l'ambiente di gioco e assicurarsi che
+                tutti si divertano nel rispetto delle regole.
               </p>
               <p>
                 Entrare in NightRP significa diventare parte di qualcosa di più
