@@ -245,6 +245,7 @@ section {
 
 #modalita .mode-image {
   flex: 0 0 40%;
+  border-radius: 17px;
 }
 
 #modalita .mode-text {
