@@ -1,56 +1,88 @@
-import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.jpg";
+// src/components/Navbar.jsx
+
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.jpg';
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header>
-      <div className="logo">
-        <img src={logo} alt="Logo NightRP" />
-        <h2>NightRP</h2>
+    <header className="bg-[#1c1c2e] p-4 flex items-center justify-between md:justify-start md:gap-8">
+      {/* Logo */}
+      <div className="logo flex items-center gap-2">
+        <img src={logo} alt="Logo NightRP" className="w-12" />
+        <h2 className="text-[#cbbcff] text-lg">NightRP</h2>
       </div>
-      <nav>
-        <button id="nav-toggle" aria-label="Apri menu">
-          <i class="fas fa-plus"></i>
-        </button>
-        <ul>
+
+      {/* Toggle button – visibile solo su mobile */}
+      <button
+        onClick={() => setOpen(o => !o)}
+        aria-label={open ? 'Chiudi menu' : 'Apri menu'}
+        className="text-[#d1b3ff] text-2xl md:hidden"
+      >
+        <i className={`fas ${open ? 'fa-times' : 'fa-plus'}`}></i>
+      </button>
+
+      {/* Menu links */}
+      <nav
+        className={`
+          ${open ? 'block' : 'hidden'}
+          absolute top-full right-4 bg-[#2a2a40] rounded-md shadow-lg p-4
+          md:static md:block md:bg-transparent md:shadow-none md:p-0
+        `}
+      >
+        <ul className="flex flex-col gap-3 md:flex-row md:gap-6">
           <li>
-            <a href="/">
-              <i className="fas fa-house" /> Home
-            </a>
+            <Link to="/" className="flex items-center gap-1 hover:text-[#a16eff]">
+              <i className="fas fa-house"></i> Home
+            </Link>
           </li>
-          <li className="dropdown">
-            <a href="/games" className="dropbtn">
-              <i className="fas fa-gamepad" /> Modalità ▾
-            </a>
-            <ul className="dropdown-content">
+          <li className="relative">
+            <Link
+              to="/games"
+              className="flex items-center gap-1 hover:text-[#a16eff]"
+            >
+              <i className="fas fa-gamepad"></i> Modalità ▾
+            </Link>
+            {/* dropdown */}
+            <ul className="dropdown-content hidden absolute left-0 mt-2 bg-[#2a2a40] border border-[#6a0dad] rounded-md">
               <li>
-                <a href="games#skyblock">Skyblock</a>
+                <Link to="/games#skyblock" className="block px-4 py-2 hover:bg-[#3a3a55]">
+                  Skyblock
+                </Link>
               </li>
               <li>
-                <a href="games#kitpvp">KitPvP OP</a>
+                <Link to="/games#kitpvp" className="block px-4 py-2 hover:bg-[#3a3a55]">
+                  KitPvP OP
+                </Link>
               </li>
               <li>
-                <a href="games#prison">Prison</a>
+                <Link to="/games#prison" className="block px-4 py-2 hover:bg-[#3a3a55]">
+                  Prison
+                </Link>
               </li>
               <li>
-                <a href="games#roleplay">Roleplay</a>
+                <Link to="/games#roleplay" className="block px-4 py-2 hover:bg-[#3a3a55]">
+                  Roleplay
+                </Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="/about">
-              <i className="fas fa-users" /> Chi Siamo
-            </a>
+            <Link to="/about" className="flex items-center gap-1 hover:text-[#a16eff]">
+              <i className="fas fa-users"></i> Chi Siamo
+            </Link>
           </li>
           <li>
-            <a href="/forum">
-              <i className="fas fa-envelope" /> Forum
-            </a>
+            <Link to="/forum" className="flex items-center gap-1 hover:text-[#a16eff]">
+              <i className="fas fa-envelope"></i> Forum
+            </Link>
           </li>
           <li>
-            <a href="/store">
-              <i className="fas fa-shopping-cart" /> Store
-            </a>
+            <Link to="/store" className="flex items-center gap-1 hover:text-[#a16eff]">
+              <i className="fas fa-shopping-cart"></i> Store
+            </Link>
           </li>
         </ul>
       </nav>
