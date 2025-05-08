@@ -2,8 +2,8 @@
 import React from "react";
 
 {/* -- Staff -- */}
-import Xx1Fede0xX from "../assets/images/team/Xx1Fede0xX.webp";
 import AyooDen from "../assets/images/team/AyooDen.gif";
+import Xx1Fede0xX from "../assets/images/team/Xx1Fede0xX.webp";
 import cicciosdao from "../assets/images/team/cicciosdao.png";
 import Gisiva2022 from "../assets/images/team/Gisiva2022.webp";
 import XxEllie999xX from "../assets/images/team/XxEllie999xX.webp";
@@ -128,17 +128,17 @@ export default function About() {
 
           <div className="staff-card">
             <div className="avatar">
-              <img src={Xx1Fede0xX} alt="Xx1Fede0xX" />
+              <img src={AyooDen} alt="AyooDen" />
             </div>
-            <h3>Xx1Fede0xX</h3>
+            <h3>AyooDen</h3>
             <p>Founder</p>
           </div>
 
           <div className="staff-card">
             <div className="avatar">
-              <img src={AyooDen} alt="AyooDen" />
+              <img src={Xx1Fede0xX} alt="Xx1Fede0xX" />
             </div>
-            <h3>AyooDen</h3>
+            <h3>Xx1Fede0xX</h3>
             <p>Founder</p>
           </div>
 
