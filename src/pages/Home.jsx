@@ -44,7 +44,7 @@ export default function Home() {
               <i className="fas fa-copy" /> {ipButtonText}
             </button>
             <button
-              onClick={() => (window.location.href = 'games.html')}
+              onClick={() => (window.location.href = '/games')}
               className="btn"
             >
               <i className="fas fa-gamepad" /> Scopri le Modalità
