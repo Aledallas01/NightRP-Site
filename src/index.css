@@ -238,7 +238,7 @@ section {
   padding: 1.5rem;
   background-color: #1a1a2e;
   border-left: 5px solid #6a0dad;
-  border-radius: 6px;
+  border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 1.3s ease;
 }
