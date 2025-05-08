@@ -400,6 +400,19 @@ footer {
   transition: background 0.3s, transform 0.2s;
 }
 
+
+@media (max-width: 900px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .hero-buttons .btn:hover {
   background-color: #8a2be2;
   transform: translateY(-2px);
