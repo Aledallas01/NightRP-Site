@@ -231,7 +231,16 @@ section {
   align-items: center;
   gap: 2rem;
   flex-direction: row;
-  /* Immagine a sinistra, testo a destra su desktop */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background-color: #1a1a2e;
+  border-left: 5px solid #6a0dad;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1.3s ease;
 }
 
 #modalita .mode-image {
@@ -260,8 +269,6 @@ section {
     width: 100%;
   }
 }
-
-
 
 /* CONTENUTO TESTUALE */
 .container {
