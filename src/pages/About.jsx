@@ -123,7 +123,7 @@ export default function About() {
       {/* Team */}
       <section id="team" className="team-section">
         <h2 className="section-title">Il Nostro Team</h2>
-        <h3>Staff</h3>
+        <h3 className="Staff">Staff</h3>
         <div className="team-container">
 
           <div className="staff-card">
@@ -176,7 +176,7 @@ export default function About() {
 
         </div>
         
-        <h3>Developer</h3>
+        <h3 className="Staff">Developer</h3>
         <div className="team-container">
 
           <div className="staff-card">
@@ -205,7 +205,7 @@ export default function About() {
           </div>
         </div>
 
-        <h3>Moderator</h3>
+        <h3 className="Staff">Moderator</h3>
         <div className="team-container">
 
           <div className="staff-card">
@@ -225,7 +225,7 @@ export default function About() {
           </div>
         </div>
 
-        <h3>Helper</h3>
+        <h3 className="Staff">Helper</h3>
         <div className="team-container">
 
           <div className="staff-card">

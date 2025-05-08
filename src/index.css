@@ -461,6 +461,10 @@ footer {
   gap: 2rem;
   margin-top: 2rem;
 }
+.Staff {
+  margin-top: 10px;
+  font-size: medium;
+}
 
 .staff-card {
   width: 220px;
