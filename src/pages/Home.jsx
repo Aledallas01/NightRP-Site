@@ -28,6 +28,8 @@ export default function Home() {
         <link rel="stylesheet" href="/CSS/style.css" />
       </head>
 
+      <script src="../components/script.js"></script>
+
       <div id="header-placeholder" />
 
       <main>
