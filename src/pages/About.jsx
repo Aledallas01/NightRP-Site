@@ -1,4 +1,32 @@
 // src/pages/About.jsx
+import React from "react";
+
+{/* -- Staff -- */}
+import Xx1Fede0xX from "../assets/images/team/Xx1Fede0xX.webp";
+import AyooDen from "../assets/images/team/AyooDen.gif";
+import cicciosdao from "../assets/images/team/cicciosdao.png";
+import Gisiva2022 from "../assets/images/team/Gisiva2022.webp";
+import XxEllie999xX from "../assets/images/team/XxEllie999xX.webp";
+import Rumenss from "../assets/images/team/Rumenss.webp";
+
+
+{/* -- Developer -- */}
+import Hert00l from "../assets/images/team/Hert00l.webp";
+import AlyGG from "../assets/images/team/Aly.webp";
+import Aledallas from "../assets/images/team/Aledallas.webp";
+
+
+{/* -- Moderator -- */}
+import ero1ne from "../assets/images/team/ero1ne.webp";
+import Carmineitor from "../assets/images/team/Carmineitor.png";
+
+{/* -- Helper -- */}
+import AlCapone from "../assets/images/team/AlCapone.webp";
+import FrostPngDanilo from "../assets/images/team/FrostPngDanilo.webp";
+import Lσяєηzσ from "../assets/images/team/Lσяєηzσ.webp";
+import Arrivatoh_ from "../assets/images/team/Arrivatoh_.webp";
+import Calogero007 from "../assets/images/team/Calogero007.webp";
+
 
 export default function About() {
     return (
@@ -95,30 +123,152 @@ export default function About() {
       {/* Team */}
       <section id="team" className="team-section">
         <h2 className="section-title">Il Nostro Team</h2>
+        <h3>Staff</h3>
         <div className="team-container">
+
           <div className="staff-card">
             <div className="avatar">
-              <img src="../images/team/Xx1Fede0xX.png" alt="Staff 1" />
+              <img src={Xx1Fede0xX} alt="Xx1Fede0xX" />
             </div>
             <h3>Xx1Fede0xX</h3>
             <p>Founder</p>
           </div>
+
           <div className="staff-card">
             <div className="avatar">
-              <img src="../assets/images/team/Aledallas.png" alt="Staff 2" />
+              <img src={AyooDen} alt="AyooDen" />
             </div>
-            <h3>Aledallas</h3>
-            <p>Web Developer</p>
+            <h3>AyooDen</h3>
+            <p>Founder</p>
           </div>
+
           <div className="staff-card">
             <div className="avatar">
-              <img src="../images/team/staff3.png" alt="Staff 3" />
+              <img src={cicciosdao} alt="cicciosdao" />
             </div>
-            <h3>Esempio</h3>
+            <h3>cicciosdao</h3>
+            <p>Manager</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Gisiva2022} alt="Gisiva2022" />
+            </div>
+            <h3>Gisiva2022</h3>
+            <p>Senior Admin</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={XxEllie999xX} alt="XxEllie999xX" />
+            </div>
+            <h3>XxEllie999xX</h3>
+            <p>Senior Admin</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Rumenss} alt="Rumenss" />
+            </div>
+            <h3>Rumenss</h3>
             <p>Admin</p>
           </div>
-          {/* Puoi aggiungerne altri */}
+
         </div>
+        
+        <h3>Developer</h3>
+        <div className="team-container">
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Hert00l} alt="Xx1Fede0xX" />
+            </div>
+            <h3>Xx1Fede0xX</h3>
+            <p>Senior Developer</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={AlyGG} alt="AlyGG" />
+            </div>
+            <h3>AlyGG</h3>
+            <p>Developer</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Aledallas} alt="Aledallas" />
+            </div>
+            <h3>Aledallas</h3>
+            <p>Junior Developer</p>
+            <p>Web Developer</p>
+          </div>
+        </div>
+
+        <h3>Moderator</h3>
+        <div className="team-container">
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={ero1ne} alt="ero1ne" />
+            </div>
+            <h3>ero1ne</h3>
+            <p>Senior Mod</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Carmineitor} alt="Carmineitor" />
+            </div>
+            <h3>Carmineitor</h3>
+            <p>Junior Mod</p>
+          </div>
+        </div>
+
+        <h3>Helper</h3>
+        <div className="team-container">
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={AlCapone} alt="AlCapone" />
+            </div>
+            <h3>AlCapone</h3>
+            <p>Senior Helper</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={FrostPngDanilo} alt="FrostPngDanilo" />
+            </div>
+            <h3>FrostPngDanilo</h3>
+            <p>Helper</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Lσяєηzσ} alt="Lσяєηzσ" />
+            </div>
+            <h3>Lσяєηzσ</h3>
+            <p>Helper</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Arrivatoh_} alt="Arrivatoh_" />
+            </div>
+            <h3>Arrivatoh_</h3>
+            <p>Junior Helper</p>
+          </div>
+
+          <div className="staff-card">
+            <div className="avatar">
+              <img src={Calogero007} alt="Calogero007" />
+            </div>
+            <h3>Calogero007</h3>
+            <p>Junior Helper</p>
+          </div>
+        </div>
+
       </section>
     </main>
     {/* FOOTER */}
