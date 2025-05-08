@@ -141,6 +141,8 @@ nav a:hover::after {
     background-color: #2a2a40;
     transition: background-color 0.3s, color 0.3s;
   }
+
+  
 }
 
 /* DROPDOWN */
