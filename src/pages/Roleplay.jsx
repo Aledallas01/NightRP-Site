@@ -27,7 +27,7 @@ export default function Roleplay() {
         <section id="roleplay-page" className="mode-details mode-card">
           <div className="container">
             <h1 className="section-title">
-              <i className="fas fa-cloud"></i> Skyblock
+              <i className="fas fa-cloud"></i> Roleplay
             </h1>
             <p className="mode-intro">
             Vivi un’esperienza realistica nella capitale americana, dove ogni scelta può cambiare il tuo destino.
