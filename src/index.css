@@ -122,6 +122,27 @@ nav a:hover::after {
   width: 100%;
 }
 
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #2a2a40;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
 /* DROPDOWN */
 .dropdown {
   position: relative;
