@@ -133,6 +133,7 @@ nav a:hover::after {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
+    display: none;
   }
 
   nav a {
@@ -141,7 +142,45 @@ nav a:hover::after {
     background-color: #2a2a40;
     transition: background-color 0.3s, color 0.3s;
   }
+
+  #nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  /* Menu aperto */
+  nav.open ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Icona X più grande per chiarezza */
+  #nav-toggle.open i {
+    font-size: 1.6rem;
+  }
 }
+
+#nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #d1b3ff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Desktop: come prima */
+@media (min-width: 901px) {
+  #nav-toggle {
+    display: none;
+  }
+}
+
+
 
 /* DROPDOWN */
 .dropdown {
