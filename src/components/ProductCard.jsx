@@ -1,41 +1,25 @@
-import React, { useState } from 'react';
-import Modal from './Modal';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
 export default function ProductCard({ product }) {
-  const { addToCart } = useContext(CartContext);
-  const [isOpen, setIsOpen] = useState(false);
+  const { addToCart, cart } = useContext(CartContext);
+  const inCart = cart.some((p) => p.id === product.id);
 
   return (
-    <>
-      <div
-        onClick={() => setIsOpen(true)}
-        className="bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition"
-      >
-        <div className="p-4">
-          <h3 className="text-xl text-purple-300">{product.name}</h3>
-          <p className="mt-2 text-white">€{product.price}</p>
-          <button
-            onClick={e => { e.stopPropagation(); addToCart(product); }}
-            className="mt-4 bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded"
-          >
-            Aggiungi
-          </button>
-        </div>
-      </div>
-
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <h2 className="mt-4 text-2xl text-purple-300">{product.name}</h2>
-        <p className="mt-2 text-gray-300">{product.description}</p>
-        <p className="mt-2 text-white font-bold">€{product.price}</p>
+    <div className="border rounded-lg p-4 bg-gray-800 text-white flex flex-col">
+      <img src={product.image} alt={product.name} className="h-40 object-cover mb-4 rounded" />
+      <h3 className="text-lg font-bold">{product.name}</h3>
+      <p className="mt-1 text-gray-300 flex-grow">{product.description}</p>
+      <div className="mt-4 flex items-center justify-between">
+        <span className="font-semibold">€{product.price.toFixed(2)}</span>
         <button
-          onClick={() => { addToCart(product); }}
-          className="mt-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
+          onClick={() => addToCart(product)}
+          disabled={inCart}
+          className={`px-3 py-1 rounded ${inCart ? 'bg-gray-600' : 'bg-purple-600 hover:bg-purple-700'}`}
         >
-          Aggiungi al carrello
+          {inCart ? 'In Carrello' : 'Aggiungi'}
         </button>
-      </Modal>
-    </>
+      </div>
+    </div>
   );
 }
