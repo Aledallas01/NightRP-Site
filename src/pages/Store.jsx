@@ -15,6 +15,19 @@ export default function Store() {
   }, []);
 
   return (
+    <>
+    <head>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Store - NightRP Minecraft Server</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <link rel="stylesheet" href="/CSS/style.css" />
+    </head>
+
+    <div id="header-placeholder" />
     <main className="p-8 bg-gray-900 text-white min-h-screen">
       <h1 className="text-4xl mb-6">Il nostro Store</h1>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -27,5 +40,6 @@ export default function Store() {
         ))}
       </div>
     </main>
+    </>
   );
 }
