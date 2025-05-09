@@ -13,6 +13,7 @@ import Store from './pages/Store.jsx';
 import Cart from './pages/Store/Cart.jsx';
 import CheckoutForm from './pages/Store/CheckoutForm.jsx';
 import OrderConfirmation from './pages/Store/OrderConfirmation.jsx';
+import CartContext from './context/CartContext.jsx';
 
 
 export default function App() {
