@@ -52,6 +52,7 @@ export default function Navbar() {
       <li>
         <a href="/cart">
           <i className="fas" /> Carrello
+          <span className="cart-badge">{cart.length}</span>
         </a>
       </li>
     </ul>
