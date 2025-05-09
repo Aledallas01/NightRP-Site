@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
+import productsData from '../data/products.json';
 
 export default function Store() {
-  const [products, setProducts] = useState([]);
+  const [products] = useState(productsData);
+  const [setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch('/data/products.json')
-      .then(res => res.json())
-      .then(setProducts)
-      .catch(console.error);
-  }, []);
+  fetch('/data/products.json')
+    .then(res => {
+      if (!res.ok) throw new Error('404 sul products.json');
+      return res.json();
+    })
+    .then(setProducts)
+    .catch(err => console.error(err));
 
   // Raggruppa per categoria
   const byCategory = products.reduce((acc, p) => {
