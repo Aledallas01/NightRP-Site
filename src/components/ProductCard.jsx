@@ -13,7 +13,6 @@ export default function ProductCard({ product }) {
         onClick={() => setIsOpen(true)}
         className="bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition"
       >
-        <img src={product.image} alt={product.name} className="w-full h-48 object-cover"/>
         <div className="p-4">
           <h3 className="text-xl text-purple-300">{product.name}</h3>
           <p className="mt-2 text-white">€{product.price}</p>
@@ -27,7 +26,6 @@ export default function ProductCard({ product }) {
       </div>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <img src={product.image} alt={product.name} className="w-full h-56 object-cover rounded"/>
         <h2 className="mt-4 text-2xl text-purple-300">{product.name}</h2>
         <p className="mt-2 text-gray-300">{product.description}</p>
         <p className="mt-2 text-white font-bold">€{product.price}</p>
