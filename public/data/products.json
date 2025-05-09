@@ -4,7 +4,7 @@
     "name": "VIP SkyBlock",
     "price": "9.99",
     "category": "SkyBlock",
-    "image": "../assets/images/SkyBlock/banner1.jpg",
+    "image": "../../src/assets/images/SkyBlock/banner1.jpg",
     "description": "Accesso VIP con permessi extra su SkyBlock."
   },
   {
@@ -12,7 +12,7 @@
     "name": "Token Prison",
     "price": "4.99",
     "category": "Prison",
-    "image": "../assets/images/Prison/banner1.jpg",
+    "image": "../../src/assets/images/Prison/banner1.jpg",
     "description": "Pacchetto di token per Prison."
   },
   {
@@ -20,7 +20,7 @@
     "name": "Bundle KitPvP OP",
     "price": "7.99",
     "category": "KitPVP OP",
-    "image": "../assets/images/KitPVP/banner1.jpg",
+    "image": "../../src/assets/images/KitPVP/banner1.jpg",
     "description": "Bundle speciale per KitPvP OP."
   },
   {
@@ -28,7 +28,7 @@
     "name": "Rank RolePlay",
     "price": "12.99",
     "category": "RolePlay",
-    "image": "../assets/images/RolePlay/banner1.jpg",
+    "image": "../../src/assets/images/RolePlay/banner1.jpg",
     "description": "Rank speciale per RolePlay."
   }
 ]
