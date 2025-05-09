@@ -1,0 +1,21 @@
+[
+    {
+      "id": "rank_vip",
+      "nome": "VIP Rank",
+      "descrizione": "Accesso VIP con tag colorato e permessi extra.",
+      "prezzo": 9.99,
+      "categoria": "rank",
+      "modalita": "kitpvp",
+      "immagine": "rank_vip.png"
+    },
+    {
+      "id": "coins_1000",
+      "nome": "1000 Monete",
+      "descrizione": "Pacchetto da 1000 monete in-game.",
+      "prezzo": 4.99,
+      "categoria": "monete",
+      "modalita": "skyblock",
+      "immagine": "coins_1000.png"
+    }
+  ]
+  

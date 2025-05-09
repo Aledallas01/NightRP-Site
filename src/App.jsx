@@ -10,6 +10,9 @@ import Prison from './pages/Prison.jsx';
 import Roleplay from './pages/Roleplay.jsx';
 import Forum from './pages/Forum.jsx';
 import Store from './pages/Store.jsx';
+import Cart from './pages/Store/Cart.jsx';
+import CheckoutForm from './pages/Store/CheckoutForm.jsx';
+import OrderConfirmation from './pages/Store/OrderConfirmation.jsx';
 
 
 export default function App() {
@@ -28,6 +31,9 @@ export default function App() {
             <Route path="/roleplay" element={<Roleplay />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/store/cart" element={<Cart />} />
+            <Route path="/store/checkout" element={<CheckoutForm />} />
+            <Route path="/store/confirmation" element={<OrderConfirmation />} />
           </Routes>
         </main>
         <Footer />
