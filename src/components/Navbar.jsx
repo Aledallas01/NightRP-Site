@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpg';
-import Cart from './pages/Cart';
 
 export default function Navbar() {
   return (
@@ -53,7 +52,6 @@ export default function Navbar() {
       <li>
         <a href="/cart">
           <i className="fas" /> Carrello
-          <span className="cart-badge">{cart.length}</span>
         </a>
       </li>
     </ul>
