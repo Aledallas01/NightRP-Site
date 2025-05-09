@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './contexts/CartContext';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
@@ -13,7 +14,6 @@ import Store from './pages/Store.jsx';
 import Cart from './pages/Store/Cart.jsx';
 import CheckoutForm from './pages/Store/CheckoutForm.jsx';
 import OrderConfirmation from './pages/Store/OrderConfirmation.jsx';
-import CartContext from './contexts/CartContext.jsx';
 
 
 export default function App() {
