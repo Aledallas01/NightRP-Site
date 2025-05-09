@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpg';
+import Cart from './pages/Cart';
 
 export default function Navbar() {
   return (
