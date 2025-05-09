@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import ProductCard from './Store/ProductCard';
-import CartContext from '../../contexts/CartContext';
+import CartContext from '../contexts/CartContext';
 
 export default function Store() {
   const [products, setProducts] = useState([]);
