@@ -13,6 +13,8 @@ import Roleplay from './pages/Roleplay.jsx';
 import Forum from './pages/Forum.jsx';
 import Store from './pages/Store';
 import Cart from './pages/Cart';
+import CheckoutForm from './components/CheckoutForm';
+import OrderConfirmation from './pages/OrderConfirmation';
 
 
 export default function App() {
