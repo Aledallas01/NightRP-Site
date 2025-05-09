@@ -1,34 +1,34 @@
 [
   {
-    "id": "sb_rank1",
-    "name": "Skyblock Rank VIP",
-    "price": 5.99,
-    "category": "Skyblock",
-    "image": "/images/SkyBlock/banner.jpg",
-    "description": "Permesso VIP per la modalità Skyblock"
+    "id": "vip-skyblock",
+    "name": "VIP SkyBlock",
+    "price": "9.99",
+    "category": "SkyBlock",
+    "image": "/assets/images/SkyBlock/banner1.jpg",
+    "description": "Accesso VIP con permessi extra su SkyBlock."
   },
   {
-    "id": "kp_rank1",
-    "name": "KitPvP Rank Pro",
-    "price": 4.99,
-    "category": "KitPvP",
-    "image": "/images/KitPVP/banner.jpg",
-    "description": "Permesso Pro per la modalità KitPvP"
-  },
-  {
-    "id": "pr_rank1",
-    "name": "Prison Rank Elite",
-    "price": 6.99,
+    "id": "token-prison",
+    "name": "Token Prison",
+    "price": "4.99",
     "category": "Prison",
-    "image": "/images/Prison/banner.jpg",
-    "description": "Permesso Elite per la modalità Prison"
+    "image": "/assets/images/Prison/banner1.jpg",
+    "description": "Pacchetto di token per Prison."
   },
   {
-    "id": "rp_rank1",
-    "name": "Roleplay Rank Citizen",
-    "price": 3.99,
-    "category": "Roleplay",
-    "image": "/images/RolePlay/banner.jpg",
-    "description": "Permesso Citizen per la modalità Roleplay"
+    "id": "bundle-kitpvp",
+    "name": "Bundle KitPvP OP",
+    "price": "7.99",
+    "category": "KitPVP OP",
+    "image": "/assets/images/KitPVP/banner1.jpg",
+    "description": "Bundle speciale per KitPvP OP."
+  },
+  {
+    "id": "rank-roleplay",
+    "name": "Rank RolePlay",
+    "price": "12.99",
+    "category": "RolePlay",
+    "image": "/assets/images/RolePlay/banner1.jpg",
+    "description": "Rank speciale per RolePlay."
   }
 ]
