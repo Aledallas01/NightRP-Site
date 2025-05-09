@@ -18,7 +18,8 @@ export default function Store() {
 
   return (
     <>
-      {/* header e footer vengono inclusi automaticamente via include.js */}
+      <div id="header-placeholder" />
+      
       <main className="p-8 bg-gray-900 text-white min-h-screen">
         <h1 className="text-4xl mb-6">Il nostro Store</h1>
         {products.length === 0 ? (
@@ -35,6 +36,8 @@ export default function Store() {
           </div>
         )}
       </main>
+      
+      <div id="footer-placeholder" />
     </>
   );
 }
