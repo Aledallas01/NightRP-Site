@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
-import productsData from '/data/products.json';
+import productsData from '../../public/data/products.json';
 
 export default function Store() {
   const [products] = useState(productsData);
