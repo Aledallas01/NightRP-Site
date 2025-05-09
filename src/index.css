@@ -814,3 +814,77 @@ footer {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+/* --- Grid prodotti nello Store --- */
+.store-grid {
+  display: grid;
+  gap: 1.5rem;                     /* equivalente a gap-6 */
+  grid-template-columns:
+    repeat(1, minmax(0, 1fr));     /* 1 colonna di default */
+}
+
+@media (min-width: 640px) {        /* sm: a partire da 640px */
+  .store-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));   /* 2 colonne */
+  }
+}
+
+@media (min-width: 1024px) {       /* lg: a partire da 1024px */
+  .store-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));   /* 3 colonne */
+  }
+}
+
+/* --- Badge contatore carrello --- */
+.cart-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ef4444;  /* red-500 */
+  color: white;
+  border-radius: 9999px;      /* pill */
+  font-size: 0.75rem;         /* text-xs */
+  width: 1.25rem;             /* w-5 */
+  height: 1.25rem;            /* h-5 */
+  margin-left: 0.25rem;       /* ml-1 */
+}
+
+/* --- Overlay modale --- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* --- Contenuto della modale --- */
+.modal-content {
+  background-color: #1f2937;  /* gray-800 */
+  color: white;
+  border-radius: 0.5rem;      /* rounded-lg */
+  padding: 1.5rem;            /* p-6 */
+  max-width: 28rem;           /* max-w-md */
+  width: 100%;
+  position: relative;
+}
+
+/* --- Pulsante di chiusura della modale --- */
+.modal-close {
+  position: absolute;
+  top: 0.5rem;                /* top-2 */
+  right: 0.5rem;              /* right-2 */
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #9ca3af;             /* gray-400 */
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: white;
+}
