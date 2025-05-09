@@ -28,8 +28,9 @@ export default function Store() {
     </head>
 
     <div id="header-placeholder" />
+
     <main className="p-8 bg-gray-900 text-white min-h-screen">
-      <h1 className="text-4xl mb-6">Il nostro Store</h1>
+      <h1>Il nostro Store</h1>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {products.map(prod => (
           <ProductCard
@@ -40,6 +41,8 @@ export default function Store() {
         ))}
       </div>
     </main>
+
+    <div id="footer-placeholder" />
     </>
   );
 }
