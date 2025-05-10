@@ -1,37 +1,22 @@
 // src/pages/Home.jsx
 
-import React, { useState } from 'react';
-import skyImg from '../assets/images/SkyBlock/banner1.jpg';
-import kitImg from '../assets/images/KitPVP/banner1.jpg';
-import prisonImg from '../assets/images/banner.jpg';
-import roleImg from '../assets/images/banner.jpg';
+import React, { useState } from "react";
+import skyImg from "../assets/images/SkyBlock/banner1.jpg";
+import kitImg from "../assets/images/KitPVP/banner1.jpg";
+import prisonImg from "../assets/images/banner.jpg";
+import roleImg from "../assets/images/banner.jpg";
 
 export default function Home() {
-  const [ipButtonText, setIpButtonText] = useState('Copia IP');
+  const [ipButtonText, setIpButtonText] = useState("Copia IP");
 
   const copiaIP = () => {
-    navigator.clipboard.writeText('play.nightrp.it');
-    setIpButtonText('IP copiato!');
-    setTimeout(() => setIpButtonText('Copia IP'), 3000);
+    navigator.clipboard.writeText("play.nightrp.it");
+    setIpButtonText("IP copiato!");
+    setTimeout(() => setIpButtonText("Copia IP"), 3000);
   };
 
   return (
     <>
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home - NightRP Minecraft Server</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="/CSS/style.css" />
-      </head>
-
-      <script src="../components/script.js"></script>
-
-      <div id="header-placeholder" />
-
       <main>
         {/* Hero */}
         <section id="home" className="hero">
@@ -46,14 +31,14 @@ export default function Home() {
               <i className="fas fa-copy" /> {ipButtonText}
             </button>
             <button
-              onClick={() => (window.location.href = '/games')}
+              onClick={() => (window.location.href = "/games")}
               className="btn"
             >
               <i className="fas fa-gamepad" /> Scopri le Modalità
             </button>
             <button
               onClick={() =>
-                window.open('https://discord.gg/2xQSRYSRjH', '_blank')
+                window.open("https://discord.gg/2xQSRYSRjH", "_blank")
               }
               className="btn"
             >
@@ -72,9 +57,9 @@ export default function Home() {
               <h2>Skyblock</h2>
               <p>
                 Inizia con un solo blocco sospeso nel vuoto e costruisci la tua
-                isola da zero. Affronta sfide settimanali, automatizza le risorse
-                e scala le classifiche. Con sistemi di upgrade, negozi e missioni
-                dedicate, ogni isola racconta una storia diversa.
+                isola da zero. Affronta sfide settimanali, automatizza le
+                risorse e scala le classifiche. Con sistemi di upgrade, negozi e
+                missioni dedicate, ogni isola racconta una storia diversa.
               </p>
             </div>
             <div className="mode-image md:w-1/2">
@@ -113,8 +98,8 @@ export default function Home() {
               <p>
                 Da prigioniero a magnate: scava, commercia, investi. Prison è la
                 modalità perfetta per chi ama la progressione continua. Ranka,
-                sblocca nuove aree, costruisci il tuo impero e domina
-                l’economia della prigione.
+                sblocca nuove aree, costruisci il tuo impero e domina l’economia
+                della prigione.
               </p>
             </div>
             <div className="mode-image md:w-1/2">
@@ -132,9 +117,9 @@ export default function Home() {
               <h2>Roleplay</h2>
               <p>
                 Vivi una vita alternativa in città realistiche, con leggi, ruoli
-                e interazioni reali. Interpreta un personaggio unico, entra in una
-                fazione o crea la tua. Ogni giorno è una nuova storia da scrivere
-                insieme agli altri giocatori.
+                e interazioni reali. Interpreta un personaggio unico, entra in
+                una fazione o crea la tua. Ogni giorno è una nuova storia da
+                scrivere insieme agli altri giocatori.
               </p>
             </div>
             <div className="mode-image md:w-1/2">
@@ -153,14 +138,14 @@ export default function Home() {
           <div className="container">
             <div className="text">
               <p>
-                Abbiamo un server Discord attivo, dove potrai ricevere assistenza,
-                proporre idee, trovare compagni di gioco o semplicemente
-                chiacchierare.
+                Abbiamo un server Discord attivo, dove potrai ricevere
+                assistenza, proporre idee, trovare compagni di gioco o
+                semplicemente chiacchierare.
               </p>
               <p>
-                Il nostro staff è disponibile ogni giorno per risolvere
-                problemi tecnici, moderare l'ambiente di gioco e assicurarsi che
-                tutti si divertano nel rispetto delle regole.
+                Il nostro staff è disponibile ogni giorno per risolvere problemi
+                tecnici, moderare l'ambiente di gioco e assicurarsi che tutti si
+                divertano nel rispetto delle regole.
               </p>
               <p>
                 Entrare in NightRP significa diventare parte di qualcosa di più
@@ -170,9 +155,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Footer Placeholder */}
-        <div id="footer-placeholder" />
       </main>
     </>
   );
