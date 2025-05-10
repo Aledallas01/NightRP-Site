@@ -1,49 +1,48 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const CartContext = createContext({
-  cart: [],
-  addToCart: () => {},
-  removeFromCart: () => {},
-  clearCart: () => {},
-  cartCount: 0,
+  carrello: [],
+  aggiungiAlCarrello: () => {},
+  rimuoviDalCarrello: () => {},
+  svuotaCarrello: () => {},
+  totaleArticoli: 0,
 });
 
 export function CartProvider({ children }) {
-  const [cart, setCart] = useState([]);
+  const [carrello, setCarrello] = useState([]);
 
-  // Persist cart to localStorage
   useEffect(() => {
-    const stored = localStorage.getItem('cart');
-    if (stored) setCart(JSON.parse(stored));
+    const salvato = localStorage.getItem('carrello');
+    if (salvato) setCarrello(JSON.parse(salvato));
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
+    localStorage.setItem('carrello', JSON.stringify(carrello));
+  }, [carrello]);
 
-  const addToCart = (product) => {
-    setCart((prev) => [...prev, product]);
+  const aggiungiAlCarrello = (prodotto) => {
+    setCarrello((prev) => [...prev, prodotto]);
   };
 
-  const removeFromCart = (productId) => {
-    setCart((prev) => prev.filter((p) => p.id !== productId));
+  const rimuoviDalCarrello = (idProdotto) => {
+    setCarrello((prev) => prev.filter((p) => p.id !== idProdotto));
   };
 
-  const clearCart = () => {
-    setCart([]);
+  const svuotaCarrello = () => {
+    setCarrello([]);
   };
 
-  const cartCount = cart.length;
+  const totaleArticoli = carrello.length;
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart, cartCount }}
+      value={{ carrello, aggiungiAlCarrello, rimuoviDalCarrello, svuotaCarrello, totaleArticoli }}
     >
       {children}
     </CartContext.Provider>
   );
 }
 
-export function useCart() {
+export function useCarrello() {
   return useContext(CartContext);
 }
