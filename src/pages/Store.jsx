@@ -28,6 +28,6 @@ export default function Store() {
         </section>
       ))}
     </main>
-<>
+</>
   );
 }
