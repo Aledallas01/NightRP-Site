@@ -14,6 +14,7 @@ export default function Store() {
   const categories = Array.from(new Set(products.map((p) => p.category)));
 
   return (
+<>
     <main className="p-8 bg-gray-900 text-white min-h-screen">
       <h1 className="text-3xl font-bold mb-6">Store</h1>
       {categories.map((cat) => (
@@ -27,5 +28,6 @@ export default function Store() {
         </section>
       ))}
     </main>
+<>
   );
 }
