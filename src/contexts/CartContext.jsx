@@ -1,48 +1,30 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-const CartContext = createContext({
-  carrello: [],
-  aggiungiAlCarrello: () => {},
-  rimuoviDalCarrello: () => {},
-  svuotaCarrello: () => {},
-  totaleArticoli: 0,
-});
+const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [carrello, setCarrello] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
-  useEffect(() => {
-    const salvato = localStorage.getItem('carrello');
-    if (salvato) setCarrello(JSON.parse(salvato));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('carrello', JSON.stringify(carrello));
-  }, [carrello]);
-
-  const aggiungiAlCarrello = (prodotto) => {
-    setCarrello((prev) => [...prev, prodotto]);
+  const addToCart = (product) => {
+    setCartItems((prev) => [...prev, product]);
   };
 
-  const rimuoviDalCarrello = (idProdotto) => {
-    setCarrello((prev) => prev.filter((p) => p.id !== idProdotto));
+  const removeFromCart = (id) => {
+    setCartItems((prev) => prev.filter((p) => p.id !== id));
   };
 
-  const svuotaCarrello = () => {
-    setCarrello([]);
-  };
-
-  const totaleArticoli = carrello.length;
+  const clearCart = () => setCartItems([]);
 
   return (
     <CartContext.Provider
-      value={{ carrello, aggiungiAlCarrello, rimuoviDalCarrello, svuotaCarrello, totaleArticoli }}
+      value={{ cartItems, addToCart, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>
   );
 }
 
-export function useCarrello() {
+// Hook personalizzato per consumare il carrello
+export function useCart() {
   return useContext(CartContext);
 }
