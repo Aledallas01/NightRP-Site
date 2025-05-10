@@ -6,6 +6,7 @@ export default function Cart() {
   const total = cart.reduce((sum, p) => sum + p.price, 0);
 
   return (
+<>
     <main className="p-8 bg-gray-900 text-white min-h-screen">
       <h1 className="text-3xl font-bold mb-6">Carrello</h1>
       {cart.length === 0 ? (
@@ -41,5 +42,6 @@ export default function Cart() {
         </>
       )}
     </main>
+<>
   );
 }
