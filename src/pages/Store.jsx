@@ -17,18 +17,7 @@ export default function Store() {
     <>
       <main className="p-8 bg-gray-900 text-white min-h-screen">
         <h1 className="text-3xl font-bold mb-6">Store</h1>
-        {categories.map((cat) => (
-          <section key={cat} className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">{cat}</h2>
-            <div className="store-grid">
-              {products
-                .filter((p) => p.category === cat)
-                .map((prod) => (
-                  <ProductCard key={prod.id} product={prod} />
-                ))}
-            </div>
-          </section>
-        ))}
+
       </main>
     </>
   );
