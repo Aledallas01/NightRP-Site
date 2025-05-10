@@ -1,5 +1,5 @@
 import React from 'react';
-import prodotti from 'data/products.json';
+import prodotti from '../data/products.json';
 import ProductCard from '../components/ProductCard';
 import { useCarrello } from '../contexts/CartContext';
 
