@@ -1,8 +1,8 @@
 // src/pages/Store.jsx
 
 import React, { useState, useEffect, useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
 import ProductCard from '../components/ProductCard';
-import CartContext from '../contexts/CartContext';
 
 export default function Store() {
   const [products, setProducts] = useState([]);
