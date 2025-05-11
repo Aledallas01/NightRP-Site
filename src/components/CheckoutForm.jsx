@@ -1,52 +1,53 @@
-import React, { useState, useContext } from 'react';
-import { CartContext } from '../contexts/CartContext';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-export default function CheckoutForm() {
-  const { cartItems, clearCart } = useContext(CartContext);
-  const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [method, setMethod] = useState('paypal');
+export default function CheckoutForm({ amount, onSuccess }) {
+  const stripe = useStripe();
+  const elements = useElements();
+  const [errorMsg, setErrorMsg] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // qui si integrerebbe PayPal/Stripe...
-    clearCart();
-    navigate('/order-confirmation', { state: { email, method, items: cartItems } });
+    setLoading(true);
+    setErrorMsg('');
+
+    const res = await fetch('/api/create-payment-intent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount }),
+    });
+    const { clientSecret, error } = await res.json();
+    if (error) {
+      setErrorMsg(error);
+      setLoading(false);
+      return;
+    }
+
+    const { error: stripeErr, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: { card: elements.getElement(CardElement) },
+    });
+
+    if (stripeErr) {
+      setErrorMsg(stripeErr.message);
+    } else if (paymentIntent.status === 'succeeded') {
+      onSuccess();
+      alert('Pagamento riuscito!');
+    }
+    setLoading(false);
   };
 
   return (
-    <main className="p-8 bg-gray-900 text-white min-h-screen">
-      <h1 className="text-3xl text-purple-300 mb-6">Checkout</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
-        <div>
-          <label className="block mb-1">Email</label>
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            className="w-full p-2 rounded bg-gray-800"
-          />
-        </div>
-        <div>
-          <label className="block mb-1">Metodo di Pagamento</label>
-          <select
-            value={method}
-            onChange={e => setMethod(e.target.value)}
-            className="w-full p-2 rounded bg-gray-800"
-          >
-            <option value="paypal">PayPal</option>
-            <option value="card">Carta di Credito</option>
-          </select>
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-green-600 hover:bg-green-700 py-2 rounded"
-        >
-          Paga Ora
-        </button>
-      </form>
-    </main>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <CardElement options={{ hidePostalCode: true }} />
+      {errorMsg && <p className="text-red-500">{errorMsg}</p>}
+      <button
+        type="submit"
+        disabled={!stripe || loading}
+        className="btn w-full"
+      >
+        {loading ? 'Elaborazione…' : `Paga €${(amount / 100).toFixed(2)}`}
+      </button>
+    </form>
   );
 }

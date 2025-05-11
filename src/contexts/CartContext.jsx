@@ -1,31 +1,27 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-const CartContext = createContext();
+export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  const [items, setItems] = useState([]);
 
   const addToCart = (product) => {
-    setCartItems((prev) => [...prev, product]);
+    setItems((cur) => {
+      const idx = cur.findIndex((i) => i.id === product.id);
+      if (idx > -1) {
+        const updated = [...cur];
+        updated[idx].qty += 1;
+        return updated;
+      }
+      return [...cur, { ...product, qty: 1 }];
+    });
   };
 
-  const removeFromCart = (id) => {
-    setCartItems((prev) => prev.filter((p) => p.id !== id));
-  };
-
-  const clearCart = () => setCartItems([]);
+  const clearCart = () => setItems([]);
 
   return (
-    <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart }}
-    >
+    <CartContext.Provider value={{ items, addToCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
 }
-
-// Hook personalizzato per consumare il carrello
-export function useCart() {
-  return useContext(CartContext);
-}
-

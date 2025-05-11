@@ -1,66 +1,18 @@
 [
   {
     "id": "rank-vip-skyblock",
-    "name": "Rank VIP",
+    "name": "VIP",
     "price": "9.99",
     "category": "SkyBlock",
-    "image": "/assets/images/SkyBlock/banner1.jpg",
-    "description": "Ottieni il Rank VIP su SkyBlock con permessi esclusivi e bonus di raccolta."
+    "image": "/src/assets/images/SkyBlock/banner1.jpg",
+    "description": "Accesso alle aree VIP e bonus esclusivi."
   },
   {
-    "id": "monete-1000-skyblock",
-    "name": "1000 Monete",
-    "price": "4.99",
+    "id": "rank-pro-skyblock",
+    "name": "PRO",
+    "price": "19.99",
     "category": "SkyBlock",
-    "image": "/assets/images/SkyBlock/banner2.jpg",
-    "description": "Acquista 1000 monete da spendere nel market di SkyBlock."
-  },
-  {
-    "id": "rank-prison-premium",
-    "name": "Rank Premium",
-    "price": "12.99",
-    "category": "Prison",
-    "image": "/assets/images/Prison/banner1.jpg",
-    "description": "Sblocca il Rank Premium in Prison con slot chest aggiuntivi e comandi speciali."
-  },
-  {
-    "id": "token-500-prison",
-    "name": "500 Token",
-    "price": "6.49",
-    "category": "Prison",
-    "image": "/assets/images/Prison/banner2.jpg",
-    "description": "Ricevi 500 token per acquistare upgrade nel server Prison."
-  },
-  {
-    "id": "rank-kitpvp-legend",
-    "name": "Rank Legend",
-    "price": "8.99",
-    "category": "KitPVP OP",
-    "image": "/assets/images/KitPVP/banner1.jpg",
-    "description": "Ottieni il Rank Legend con kit esclusivi e tag di prestigio in KitPvP."
-  },
-  {
-    "id": "bundle-kitpvp-avanzato",
-    "name": "Bundle Avanzato",
-    "price": "5.99",
-    "category": "KitPVP OP",
-    "image": "/assets/images/KitPVP/banner2.jpg",
-    "description": "Ricevi tutti i kit avanzati e 500 monete KitPvP in un unico bundle."
-  },
-  {
-    "id": "rank-roleplay-cittadino",
-    "name": "Rank Cittadino",
-    "price": "7.49",
-    "category": "RolePlay",
-    "image": "/assets/images/RolePlay/banner1.jpg",
-    "description": "Diventa Cittadino ufficiale nella mappa di RolePlay a Washington, con accesso alle case."
-  },
-  {
-    "id": "token-roleplay-250",
-    "name": "250 Token",
-    "price": "3.99",
-    "category": "RolePlay",
-    "image": "/assets/images/RolePlay/banner2.jpg",
-    "description": "Acquista 250 token da spendere nel negozio di oggetti RolePlay."
+    "image": "/src/assets/images/SkyBlock/banner2.jpg",
+    "description": "Tutti i vantaggi VIP + extra perks."
   }
 ]
