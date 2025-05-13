@@ -1,18 +1,42 @@
 [
   {
-    "id": "rank-vip-skyblock",
-    "name": "VIP",
-    "price": "9.99",
+    "id": "Rank-VIP-SkyBlock",
+    "name": "VIP SkyBlock",
+    "price": 9.99,
     "category": "SkyBlock",
-    "image": "/src/assets/images/SkyBlock/banner1.jpg",
-    "description": "Accesso alle aree VIP e bonus esclusivi."
+    "image": "/assets/images/SkyBlock/banner1.jpg",
+    "description": "Accesso VIP con perk esclusivi su SkyBlock."
   },
   {
-    "id": "rank-pro-skyblock",
-    "name": "PRO",
-    "price": "19.99",
+    "id": "Rank-XL-SkyBlock",
+    "name": "XL SkyBlock",
+    "price": 14.99,
     "category": "SkyBlock",
-    "image": "/src/assets/images/SkyBlock/banner2.jpg",
-    "description": "Tutti i vantaggi VIP + extra perks."
+    "image": "/assets/images/SkyBlock/banner2.jpg",
+    "description": "Pacchetto XL con bonus risorse e slot extra."
+  },
+  {
+    "id": "Rank-VIP-KitPVP",
+    "name": "VIP KitPvP",
+    "price": 8.99,
+    "category": "KitPvP OP",
+    "image": "/assets/images/KitPVP/banner1.jpg",
+    "description": "Accesso VIP con armatura ed effetti particellari."
+  },
+  {
+    "id": "Rank-VIP-Prison",
+    "name": "VIP Prison",
+    "price": 7.99,
+    "category": "Prison",
+    "image": "/assets/images/Prison/banner1.jpg",
+    "description": "Permette di scartare blocchi doppi e bonus XP."
+  },
+  {
+    "id": "Rank-VIP-RolePlay",
+    "name": "VIP RolePlay",
+    "price": 12.99,
+    "category": "RolePlay",
+    "image": "/assets/images/RolePlay/banner1.jpg",
+    "description": "Skin personalizzate e icone sul tabellone."
   }
 ]

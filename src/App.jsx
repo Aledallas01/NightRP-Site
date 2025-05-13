@@ -1,7 +1,7 @@
+// src/App.jsx
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CartProvider } from './contexts/CartContext';
-import Navbar from './components/Navbar.jsx';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Games from './pages/Games.jsx';
@@ -11,10 +11,10 @@ import KitPvP from './pages/KitPVP.jsx';
 import Prison from './pages/Prison.jsx';
 import Roleplay from './pages/Roleplay.jsx';
 import Forum from './pages/Forum.jsx';
-import Store from './pages/Store';
-import Cart from './pages/Cart';
-import CheckoutForm from './components/CheckoutForm';
-import OrderConfirmation from './pages/OrderConfirmation';
+import Store from './pages/Store.jsx';
+import Cart from './pages/Cart.jsx';
+import Checkout from './pages/Checkout.jsx';
+import OrderConfirmation from './pages/OrderConfirmation.jsx';
 
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
             <Route path="/forum" element={<Forum />} />
             <Route path="/store" element={<Store />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<CheckoutForm />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
           </Routes>
         </main>

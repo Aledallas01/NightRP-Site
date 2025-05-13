@@ -1,52 +1,44 @@
-import React, { useState } from 'react';
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+// src/components/CheckoutForm.jsx
+import React, { useState, useContext } from 'react';
+import CartContext from '../contexts/CartContext';
+import { useNavigate } from 'react-router-dom';
 
-export default function CheckoutForm({ amount, onSuccess }) {
-  const stripe = useStripe();
-  const elements = useElements();
-  const [errorMsg, setErrorMsg] = useState('');
-  const [loading, setLoading] = useState(false);
+export default function CheckoutForm() {
+  const { cart, clearCart } = useContext(CartContext);
+  const navigate = useNavigate();
+  const [method, setMethod] = useState('stripe');
 
-  const handleSubmit = async (e) => {
+  const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
+
+  const handleSubmit = e => {
     e.preventDefault();
-    setLoading(true);
-    setErrorMsg('');
-
-    const res = await fetch('/api/create-payment-intent', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ amount }),
-    });
-    const { clientSecret, error } = await res.json();
-    if (error) {
-      setErrorMsg(error);
-      setLoading(false);
-      return;
-    }
-
-    const { error: stripeErr, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: { card: elements.getElement(CardElement) },
-    });
-
-    if (stripeErr) {
-      setErrorMsg(stripeErr.message);
-    } else if (paymentIntent.status === 'succeeded') {
-      onSuccess();
-      alert('Pagamento riuscito!');
-    }
-    setLoading(false);
+    // qui integreresti Stripe/PayPal SDK
+    // per ora simuliamo:
+    clearCart();
+    navigate('/order-confirmation', { state: { total, method, date: new Date().toISOString() } });
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <CardElement options={{ hidePostalCode: true }} />
-      {errorMsg && <p className="text-red-500">{errorMsg}</p>}
-      <button
-        type="submit"
-        disabled={!stripe || loading}
-        className="btn w-full"
-      >
-        {loading ? 'Elaborazione…' : `Paga €${(amount / 100).toFixed(2)}`}
+      <h2 className="text-xl font-semibold">Totale: €{total.toFixed(2)}</h2>
+      <div>
+        <label className="mr-4">
+          <input type="radio" name="pay" value="stripe" checked={method==='stripe'}
+            onChange={() => setMethod('stripe')} /> Stripe
+        </label>
+        <label className="mr-4">
+          <input type="radio" name="pay" value="paypal" checked={method==='paypal'}
+            onChange={() => setMethod('paypal')} /> PayPal
+        </label>
+        <label>
+          <input type="radio" name="pay" value="card" checked={method==='card'}
+            onChange={() => setMethod('card')} /> Carta
+        </label>
+      </div>
+      {/* In un’implementazione reale qui caricheresti i componenti SDK */}
+      <button type="submit"
+        className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded">
+        Paga con {method === 'stripe' ? 'Stripe' : method==='paypal' ? 'PayPal' : 'Carta'}
       </button>
     </form>
   );

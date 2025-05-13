@@ -1,41 +1,42 @@
+// src/components/ProductCard.jsx
 import React, { useState, useContext } from 'react';
 import Modal from './Modal';
-import { CartContext } from '../contexts/CartContext';
+import CheckoutForm from './CheckoutForm';
+import CartContext from '../contexts/CartContext';
 
 export default function ProductCard({ product }) {
-  const { addToCart } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <div
-        className="border rounded shadow p-4 cursor-pointer hover:shadow-lg"
+        className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg cursor-pointer"
         onClick={() => setOpen(true)}
       >
-        <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-2" />
-        <h3 className="font-semibold text-lg">{product.name}</h3>
-        <p className="text-purple-300">€{product.price}</p>
+        <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded" />
+        <h3 className="mt-2 text-lg font-medium">{product.name}</h3>
+        <p className="mt-1 text-indigo-400 font-semibold">€{product.price.toFixed(2)}</p>
         <button
-          className="mt-2 btn w-full"
-          onClick={(e) => { e.stopPropagation(); addToCart(product); }}
+          onClick={e => { e.stopPropagation(); addItem(product); }}
+          className="mt-3 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-1 rounded"
         >
           Aggiungi al carrello
         </button>
       </div>
 
-      {open && (
-        <Modal onClose={() => setOpen(false)}>
-          <img src={product.image} alt={product.name} className="w-full h-64 object-cover mb-4" />
-          <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
-          <p className="mb-4">{product.description}</p>
-          <button
-            className="btn"
-            onClick={() => { addToCart(product); setOpen(false); }}
-          >
-            Aggiungi al carrello
-          </button>
-        </Modal>
-      )}
+      <Modal isOpen={open} onClose={() => setOpen(false)}>
+        <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded" />
+        <h2 className="mt-4 text-2xl">{product.name}</h2>
+        <p className="mt-2 text-gray-300">{product.description}</p>
+        <p className="mt-2 text-indigo-400 font-semibold">€{product.price.toFixed(2)}</p>
+        <button
+          onClick={() => { addItem(product); setOpen(false); }}
+          className="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded"
+        >
+          Aggiungi al carrello
+        </button>
+      </Modal>
     </>
   );
 }

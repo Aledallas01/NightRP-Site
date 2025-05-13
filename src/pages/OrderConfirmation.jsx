@@ -1,25 +1,20 @@
-import React from "react";
-import { useLocation, Link } from "react-router-dom";
+// src/pages/OrderConfirmation.jsx
+import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
 export default function OrderConfirmation() {
   const { state } = useLocation();
-  if (!state)
-    return <p className="text-center mt-20">Nessun ordine trovato.</p>;
-
-  const { email, method, items } = state;
-  const total = items
-    .reduce((sum, i) => sum + i.quantity * parseFloat(i.price), 0)
-    .toFixed(2);
-
+  if (!state) {
+    return <Link to="/store" className="text-indigo-400">Torna allo Store</Link>;
+  }
+  const { total, method, date } = state;
   return (
-    <main className="p-8 bg-gray-900 text-white min-h-screen text-center">
-      <h1 className="text-4xl text-purple-300 mb-4">
-        Grazie per il tuo acquisto!
-      </h1>
-      <p className="mb-2">Email: {email}</p>
-      <p className="mb-2">Metodo: {method}</p>
-      <p className="mb-4 font-bold">Totale pagato: €{total}</p>
-      <Link to="/" className="text-purple-400 hover:underline">
+    <main className="p-8 bg-gray-900 text-white min-h-screen">
+      <h1 className="text-3xl mb-4">Grazie per il tuo acquisto!</h1>
+      <p>Metodo di pagamento: <strong>{method}</strong></p>
+      <p>Importo totale: <strong>€{total.toFixed(2)}</strong></p>
+      <p>Data ordine: <strong>{new Date(date).toLocaleString()}</strong></p>
+      <Link to="/" className="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">
         Torna alla Home
       </Link>
     </main>

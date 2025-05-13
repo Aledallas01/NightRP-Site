@@ -1,36 +1,34 @@
-import React, { useEffect, useState, useContext } from 'react';
+// src/pages/Store.jsx
+import React from 'react';
+import products from '../data/products.json';
 import ProductCard from '../components/ProductCard';
-import { CartContext } from '../contexts/CartContext';
+import { Link } from 'react-router-dom';
 
 export default function Store() {
-  const [products, setProducts] = useState([]);
-  const { items } = useContext(CartContext);
-
-  // carica i prodotti
-  useEffect(() => {
-    fetch('/src/pages/data/products.json')
-      .then((res) => res.json())
-      .then(setProducts)
-      .catch(console.error);
-  }, []);
-
-  const categories = Array.from(new Set(products.map((p) => p.category)));
+  // estrai categorie uniche
+  const categories = Array.from(new Set(products.map(p => p.category)));
 
   return (
-    <main className="p-8 bg-gray-900 text-white min-h-screen space-y-12">
-      <h1 className="text-3xl font-bold">Il nostro Store</h1>
-      {categories.map((cat) => (
-        <section key={cat}>
-          <h2 className="text-2xl font-semibold mb-4">{cat}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products
-              .filter((p) => p.category === cat)
-              .map((prod) => (
-                <ProductCard key={prod.id} product={prod} />
-              ))}
-          </div>
-        </section>
-      ))}
-    </main>
+    <>
+      <head>
+        <title>Store - NightRP</title>
+      </head>
+      <main className="p-8 bg-gray-900 text-white min-h-screen">
+        <h1 className="text-3xl mb-6">Store</h1>
+        {categories.map(category => (
+          <section key={category} className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4">{category}</h2>
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              {products
+                .filter(p => p.category === category)
+                .map(prod => <ProductCard key={prod.id} product={prod} />)}
+            </div>
+          </section>
+        ))}
+        <Link to="/cart" className="fixed bottom-6 right-6 bg-indigo-600 text-white p-4 rounded-full shadow-lg">
+          🛒
+        </Link>
+      </main>
+    </>
   );
 }
