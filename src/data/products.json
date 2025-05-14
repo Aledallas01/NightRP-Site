@@ -4,7 +4,7 @@
     "name": "VIP SkyBlock",
     "price": 9.99,
     "category": "SkyBlock",
-    "image": "/assets/images/SkyBlock/banner1.jpg",
+    "image": "../assets/images/SkyBlock/banner1.jpg",
     "description": "Accesso VIP con perk esclusivi su SkyBlock."
   },
   {
@@ -12,7 +12,7 @@
     "name": "XL SkyBlock",
     "price": 14.99,
     "category": "SkyBlock",
-    "image": "/assets/images/SkyBlock/banner2.jpg",
+    "image": "../assets/images/SkyBlock/banner2.jpg",
     "description": "Pacchetto XL con bonus risorse e slot extra."
   },
   {
@@ -20,7 +20,7 @@
     "name": "VIP KitPvP",
     "price": 8.99,
     "category": "KitPvP OP",
-    "image": "/assets/images/KitPVP/banner1.jpg",
+    "image": "../assets/images/KitPVP/banner1.jpg",
     "description": "Accesso VIP con armatura ed effetti particellari."
   },
   {
@@ -28,7 +28,7 @@
     "name": "VIP Prison",
     "price": 7.99,
     "category": "Prison",
-    "image": "/assets/images/Prison/banner1.jpg",
+    "image": "../assets/images/Prison/banner1.jpg",
     "description": "Permette di scartare blocchi doppi e bonus XP."
   },
   {
@@ -36,7 +36,7 @@
     "name": "VIP RolePlay",
     "price": 12.99,
     "category": "RolePlay",
-    "image": "/assets/images/RolePlay/banner1.jpg",
+    "image": "../assets/images/RolePlay/banner1.jpg",
     "description": "Skin personalizzate e icone sul tabellone."
   }
 ]
