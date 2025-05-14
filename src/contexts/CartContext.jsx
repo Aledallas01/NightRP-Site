@@ -1,60 +1,46 @@
 // src/contexts/CartContext.jsx
-import React, { createContext, useReducer, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
-const CART_KEY = 'nightrp_cart';
+// Esportiamo un context nominale
+export const CartContext = createContext();
 
-const CartContext = createContext();
-
-function cartReducer(state, action) {
-  switch (action.type) {
-    case 'INIT':
-      return action.payload;
-    case 'ADD':
-      {
-        const exists = state.find(item => item.id === action.payload.id);
-        if (exists) {
-          return state.map(item =>
-            item.id === action.payload.id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
-          );
-        }
-        return [...state, { ...action.payload, quantity: 1 }];
-      }
-    case 'REMOVE':
-      return state.filter(item => item.id !== action.payload);
-    case 'CLEAR':
-      return [];
-    default:
-      return state;
-  }
-}
-
+// Provider che avvolge l’app e mantiene lo state del carrello (persistito via localStorage)
 export function CartProvider({ children }) {
-  const [cart, dispatch] = useReducer(cartReducer, []);
+  // Leggiamo il carrello da localStorage, o inizializziamo a lista vuota
+  const [cart, setCart] = useState(() => {
+    try {
+      const stored = localStorage.getItem('cart');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
 
-  // init from localStorage
+  // Ogni volta che cambia cart, salviamo su localStorage
   useEffect(() => {
-    const stored = localStorage.getItem(CART_KEY);
-    if (stored) dispatch({ type: 'INIT', payload: JSON.parse(stored) });
-  }, []);
-
-  // persist
-  useEffect(() => {
-    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addItem = product => dispatch({ type: 'ADD', payload: product });
-  const removeItem = id => dispatch({ type: 'REMOVE', payload: id });
-  const clearCart = () => dispatch({ type: 'CLEAR' });
+  // Aggiunge un prodotto (puoi decidere se permettere duplicati o controllare ID)
+  const addToCart = product => {
+    setCart(prev => [...prev, product]);
+  };
 
-  const itemCount = cart.reduce((sum, i) => sum + i.quantity, 0);
+  // Rimuove un prodotto per ID
+  const removeFromCart = id => {
+    setCart(prev => prev.filter(p => p.id !== id));
+  };
+
+  // Svuota il carrello
+  const clearCart = () => {
+    setCart([]);
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, itemCount }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
 }
-
-export default CartContext;
