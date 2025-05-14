@@ -34,7 +34,7 @@ export default function Store() {
       </main>
 
       <Link to="/cart" className="cart-button" aria-label="Vai al carrello">
-        🛒
+        <i className="fas fa-shopping-cart" />
       </Link>
     </div>
   );
