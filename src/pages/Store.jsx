@@ -11,7 +11,9 @@ export default function Store() {
   return (
     <div className="store-page">
       <header className="store-header">
-        <h1 className="fas fa-shopping-cart">Store</h1>
+          <h1>
+            <i className="fas fa-shopping-cart" /> Store
+          </h1>
       </header>
 
       <main className="store-container">
