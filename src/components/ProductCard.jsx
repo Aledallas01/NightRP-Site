@@ -24,9 +24,7 @@ export default function ProductCard({ product }) {
           <p className="product-price">€ {product.price}</p>
           <button
             className="add-btn"
-            onClick={e => {
-              e.stopPropagation();
-              // qui chiameresti addToCart...
+            onClick={e => { e.stopPropagation(); addItem(product);
             }}
           >
             Aggiungi
@@ -43,8 +41,7 @@ export default function ProductCard({ product }) {
             <p className="modal-price">€ {product.price}</p>
             <button
               className="add-btn modal-add"
-              onClick={() => {
-                // addToCart...
+              onClick={() => { addItem(product); setOpen(false);
                 setOpen(false);
               }}
             >
