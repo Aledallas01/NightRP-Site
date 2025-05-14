@@ -10,6 +10,9 @@ export default function ProductCard({ product }) {
 
   return (
     <>
+      <head>
+        <link rel="stylesheet" href="../index.css" />
+      </head>
       <div
         className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg cursor-pointer"
         onClick={() => setOpen(true)}
