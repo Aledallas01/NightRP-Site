@@ -30,12 +30,14 @@ export default function ProductCard({ product }) {
         <h2 className="mt-4 text-2xl">{product.name}</h2>
         <p className="mt-2 text-gray-300">{product.description}</p>
         <p className="mt-2 text-indigo-400 font-semibold">€{product.price.toFixed(2)}</p>
-        <button
-          onClick={() => { addItem(product); setOpen(false); }}
-          className="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded"
-        >
-          Aggiungi al carrello
-        </button>
+        <div className="hero-buttons">
+          <button
+            onClick={() => { addItem(product); setOpen(false); }}
+            className="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded"
+          >
+            Aggiungi al carrello
+          </button>
+        </div>
       </Modal>
     </>
   );
