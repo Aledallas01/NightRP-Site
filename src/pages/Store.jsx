@@ -10,11 +10,12 @@ export default function Store() {
 
   return (
     <div className="store-page">
-      <header className="store-header">
-          <h1>
-            <i className="fas fa-shopping-cart" /> Store
-          </h1>
-      </header>
+      
+    <section className="hero" id="games-hero">
+      <h1>
+        <i className="fas fa-shopping-cart" /> Store
+      </h1>
+    </section>
 
       <main className="store-container">
         {categories.map(category => (
