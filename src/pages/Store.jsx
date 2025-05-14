@@ -15,6 +15,7 @@ export default function Store() {
       <h1>
         <i className="fas fa-shopping-cart" /> Store
       </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolores cum molestias accusantium qui quia repellendus dignissimos, corporis nisi officiis, facilis aliquid. Eaque harum rem deserunt velit voluptas assumenda laudantium.</p>
     </section>
 
       <main className="store-container">
