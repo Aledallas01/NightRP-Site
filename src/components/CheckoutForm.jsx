@@ -1,6 +1,6 @@
 // src/components/CheckoutForm.jsx
 import React, { useState, useContext } from 'react';
-import CartContext from '../contexts/CartContext';
+import { CartContext } from '../contexts/CartContext';
 import { useNavigate } from 'react-router-dom';
 
 export default function CheckoutForm() {
