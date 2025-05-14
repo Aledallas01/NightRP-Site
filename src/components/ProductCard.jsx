@@ -1,12 +1,15 @@
 // src/components/ProductCard.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Modal from './Modal';
+import { CartContext } from '../contexts/CartContext';
 
 export default function ProductCard({ product }) {
+  const { addToCart } = useContext(CartContext);
   const [open, setOpen] = useState(false);
 
   return (
     <>
+      {/* CARD */}
       <div
         className="product-card"
         onClick={() => setOpen(true)}
@@ -14,17 +17,24 @@ export default function ProductCard({ product }) {
         tabIndex={0}
         onKeyPress={() => setOpen(true)}
       >
+        {/* IMMAGINE */}
         <div
           className="product-image"
           style={{ backgroundImage: `url(${product.image})` }}
           aria-label={product.name}
         />
+
+        {/* INFORMAZIONI */}
         <div className="product-info">
-          <h3 className="product-name">{product.name}</h3>
-          <p className="product-price">€ {product.price}</p>
+          <div>
+            <h3 className="product-name">{product.name}</h3>
+            <p className="product-price">€ {product.price}</p>
+          </div>
           <button
             className="add-btn"
-            onClick={e => { e.stopPropagation(); addItem(product);
+            onClick={e => {
+              e.stopPropagation();
+              addToCart(product);
             }}
           >
             Aggiungi
@@ -32,6 +42,7 @@ export default function ProductCard({ product }) {
         </div>
       </div>
 
+      {/* MODAL */}
       {open && (
         <Modal onClose={() => setOpen(false)}>
           <div className="modal-content">
@@ -41,7 +52,8 @@ export default function ProductCard({ product }) {
             <p className="modal-price">€ {product.price}</p>
             <button
               className="add-btn modal-add"
-              onClick={() => { addItem(product); setOpen(false);
+              onClick={() => {
+                addToCart(product);
                 setOpen(false);
               }}
             >
