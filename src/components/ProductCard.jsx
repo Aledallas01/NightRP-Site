@@ -17,12 +17,14 @@ export default function ProductCard({ product }) {
         <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded" />
         <h3 className="mt-2 text-lg font-medium">{product.name}</h3>
         <p className="mt-1 text-indigo-400 font-semibold">€{product.price.toFixed(2)}</p>
-        <button
-          onClick={e => { e.stopPropagation(); addItem(product); }}
-          className="mt-3 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-1 rounded"
-        >
-          Aggiungi al carrello
-        </button>
+        <div className="hero-buttons"> 
+          <button
+            onClick={e => { e.stopPropagation(); addItem(product); }}
+            className="mt-3 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-1 rounded"
+          >
+            Aggiungi al carrello
+          </button>
+        </div>
       </div>
 
       <Modal isOpen={open} onClose={() => setOpen(false)}>
