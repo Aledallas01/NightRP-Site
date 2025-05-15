@@ -1,64 +1,62 @@
-// src/components/Navbar.jsx
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpg';
 
 export default function Navbar() {
   return (
-    <header className="site-header">
-      <div className="logo">
-        <Link to="/" className="logo__link">
-          <img src={logo} alt="Logo NightRP" className="logo__img" />
-          <h2 className="logo__title">NightRP</h2>
-        </Link>
-      </div>
-      <nav className="site-nav">
-        <ul className="site-nav__list">
-          <li className="site-nav__item">
-            <Link to="/" className="site-nav__link">
-              <i className="fas fa-house" /> Home
-            </Link>
+<header>
+  <div className="logo">
+    <img src={logo} alt="Logo NightRP" />
+    <h2>NightRP</h2>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">
+          <i className="fas fa-house" /> Home
+        </a>
+      </li>
+      <li className="dropdown">
+        <a href="/games" className="dropbtn">
+          <i className="fas fa-gamepad" /> Modalità ▾
+        </a>
+        <ul className="dropdown-content">
+          <li>
+            <a href="games#skyblock">Skyblock</a>
           </li>
-          <li className="site-nav__item dropdown">
-            <Link to="/games" className="site-nav__link dropbtn">
-              <i className="fas fa-gamepad" /> Modalità ▾
-            </Link>
-            <ul className="dropdown-content">
-              <li>
-                <Link to="/games#skyblock">Skyblock</Link>
-              </li>
-              <li>
-                <Link to="/games#kitpvp">KitPvP OP</Link>
-              </li>
-              <li>
-                <Link to="/games#prison">Prison</Link>
-              </li>
-              <li>
-                <Link to="/games#roleplay">Roleplay</Link>
-              </li>
-            </ul>
+          <li>
+            <a href="games#kitpvp">KitPvP OP</a>
           </li>
-          <li className="site-nav__item">
-            <Link to="/about" className="site-nav__link">
-              <i className="fas fa-users" /> Chi Siamo
-            </Link>
+          <li>
+            <a href="games#prison">Prison</a>
           </li>
-          <li className="site-nav__item">
-            <Link to="/forum" className="site-nav__link">
-              <i className="fas fa-envelope" /> Forum
-            </Link>
-          </li>
-          <li className="site-nav__item">
-            <Link to="/store" className="site-nav__link">
-              <i className="fas fa-shopping-cart" /> Store
-            </Link>
-          </li>
-          <li className="site-nav__item">
-            <Link to="/cart" className="site-nav__link">
-              <i className="fas fa-shopping-cart" /> Carrello
-            </Link>
+          <li>
+            <a href="games#roleplay">Roleplay</a>
           </li>
         </ul>
-      </nav>
-    </header>
+      </li>
+      <li>
+        <a href="/about">
+          <i className="fas fa-users" /> Chi Siamo
+        </a>
+      </li>
+      <li>
+        <a href="/forum">
+          <i className="fas fa-envelope" /> Forum
+        </a>
+      </li>
+      <li>
+        <a href="/store">
+          <i className="fas fa-shopping-cart" /> Store
+        </a>
+      </li>
+      <li>
+        <a href="/cart">
+          <i className="fas" /> Carrello
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
   );
 }

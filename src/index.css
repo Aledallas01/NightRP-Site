@@ -128,19 +128,14 @@ body {
   width: 100%;
 }
 
-/* DROPDOWN */
-.dropdown {
-  position: relative;
-}
-
-/* DROPDOWN - elementi verticali */
+/* Dropdown */
 .dropdown-content {
-  display: block;
-  flex-direction: column;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: #2a2a40;
   border: 1px solid #6a0dad;
-  min-width: 140px;
+  min-width: 160px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -149,7 +144,6 @@ body {
   pointer-events: none;
 }
 
-/* Mostra il dropdown quando si passa col mouse */
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
   opacity: 1;
@@ -159,19 +153,19 @@ body {
   pointer-events: auto;
 }
 
-/* Ogni voce una sotto l’altra */
 .dropdown-content li {
   width: 100%;
 }
 
-.dropdown-content a {
+.dropdown-content__link {
   display: block;
   padding: 0.5rem 1rem;
   color: #cbbcff;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-.dropdown-content a:hover {
+.dropdown-content__link:hover {
   background-color: #3a3a55;
 }
 
