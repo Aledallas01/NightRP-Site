@@ -7,7 +7,7 @@ export default function Checkout() {
     <main className="p-8 bg-gray-900 text-white min-h-screen">
     <section className="hero" id="games-hero">
       <h1>
-        <i className="fas fa-shopping-cart" /> Store
+        <i className="fas fa-shopping-cart" /> Checkout
       </h1>
     </section>
       <CheckoutForm />
