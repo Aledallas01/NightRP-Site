@@ -21,7 +21,12 @@ export default function Cart() {
 
   return (
     <main className="cart-page">
-      <h1>Il tuo Carrello</h1>
+    <section className="hero" id="games-hero">
+      <h1>
+        <i className="fas fa-shopping-cart" /> Carrello
+      </h1>
+      <p>Questo è il riepilogo del tuo carrello. Qui trovi tutti gli oggetti che hai aggiunto al tuo ordine</p>
+    </section>
 
       <ul className="cart-list">
         {cart.map(item => (

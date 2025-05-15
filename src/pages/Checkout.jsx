@@ -5,7 +5,11 @@ import CheckoutForm from '../components/CheckoutForm';
 export default function Checkout() {
   return (
     <main className="p-8 bg-gray-900 text-white min-h-screen">
-      <h1 className="text-3xl mb-6">Checkout</h1>
+    <section className="hero" id="games-hero">
+      <h1>
+        <i className="fas fa-shopping-cart" /> Store
+      </h1>
+    </section>
       <CheckoutForm />
     </main>
   );
