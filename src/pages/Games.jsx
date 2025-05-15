@@ -23,7 +23,7 @@ export default function Forum() {
           id="skyblock"
           className="mode-details mode-card"
         >
-          <div id="Skyblock" className="container">
+          <div id="skyblock" className="container">
             <h2 className="section-title">
               <i className="fas fa-cloud" /> Skyblock
             </h2>
@@ -66,7 +66,7 @@ export default function Forum() {
           id="kitpvp"
           className="mode-details mode-card alt"
         >
-          <div id="KitPVP" className="container">
+          <div id="kitpvp" className="container">
             <h2 className="section-title">
               <i className="fas fa-crosshairs" /> KitPvP OP
             </h2>
@@ -146,7 +146,7 @@ export default function Forum() {
           id="prison"
           className="mode-details mode-card"
         >
-          <div id="Prison" className="container">
+          <div id="prison" className="container">
             <h2 className="section-title">
               <i className="fas fa-shackles" /> Prison
             </h2>
@@ -177,7 +177,7 @@ export default function Forum() {
           id="roleplay"
           className="mode-details mode-card alt"
         >
-          <div id="Roleplay" className="container">
+          <div id="roleplay" className="container">
             <h2 className="section-title">
               <i className="fas fa-theater-masks" /> Roleplay
             </h2>
