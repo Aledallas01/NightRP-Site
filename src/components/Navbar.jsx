@@ -24,30 +24,22 @@ export default function Navbar() {
             </Link>
             <ul className="dropdown-content">
               <li>
-                <Link to="/games#skyblock" className="dropdown-content__link">
-                  Skyblock
-                </Link>
+                <Link to="/games#skyblock">Skyblock</Link>
               </li>
               <li>
-                <Link to="/games#kitpvp" className="dropdown-content__link">
-                  KitPvP OP
-                </Link>
+                <Link to="/games#kitpvp">KitPvP OP</Link>
               </li>
               <li>
-                <Link to="/games#prison" className="dropdown-content__link">
-                  Prison
-                </Link>
+                <Link to="/games#prison">Prison</Link>
               </li>
               <li>
-                <Link to="/games#roleplay" className="dropdown-content__link">
-                  Roleplay
-                </Link>
+                <Link to="/games#roleplay">Roleplay</Link>
               </li>
             </ul>
           </li>
           <li className="site-nav__item">
             <Link to="/about" className="site-nav__link">
-              <i className="fas fa-users" /> Chi Siamo
+              <i className="fas fa-users" /> Chi Siamo
             </Link>
           </li>
           <li className="site-nav__item">
