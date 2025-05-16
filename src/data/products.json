@@ -4,7 +4,7 @@
     "name": "Rank VIP",
     "price": 9.99,
     "category": "SkyBlock",
-    "image": "SkyBlock/banner1.jpg",
+    "image": "SkyBlock/banner3.jpg",
     "description": "Accesso esclusivo a comandi VIP, chat colorata e slot aggiuntivi."
   },
   {
@@ -12,7 +12,7 @@
     "name": "1000 Monete",
     "price": 4.99,
     "category": "SkyBlock",
-    "image": "SkyBlock/banner2.jpg",
+    "image": "SkyBlock/banner3.jpg",
     "description": "Pacchetto da 1000 monete per potenziare subito la tua isola."
   },
   {
@@ -28,7 +28,7 @@
     "name": "Bundle Starter",
     "price": 14.99,
     "category": "SkyBlock",
-    "image": "SkyBlock/banner1.jpg",
+    "image": "SkyBlock/banner3.jpg",
     "description": "Rank VIP + 1000 monete + 3 token a un prezzo scontato."
   },
   {
@@ -36,7 +36,7 @@
     "name": "Upgrade Isola",
     "price": 7.99,
     "category": "SkyBlock",
-    "image": "SkyBlock/banner2.jpg",
+    "image": "SkyBlock/banner3.jpg",
     "description": "Sblocca un livello avanzato per aumentare lo spazio della tua isola."
   },
   {
@@ -57,7 +57,7 @@
     "name": "Rank VIP",
     "price": 9.99,
     "category": "Prison",
-    "image": "Prison/banner1.jpg",
+    "image": "Prison/banner3.jpg",
     "description": "Accesso VIP in Prison, chat colorata e spawn privato."
   },
   {
@@ -65,7 +65,7 @@
     "name": "1000 Monete",
     "price": 4.99,
     "category": "Prison",
-    "image": "Prison/banner2.jpg",
+    "image": "Prison/banner3.jpg",
     "description": "Pacchetto da 1000 monete per acquisti in-game immediati."
   },
   {
@@ -81,7 +81,7 @@
     "name": "Bundle Starter",
     "price": 14.99,
     "category": "Prison",
-    "image": "Prison/banner1.jpg",
+    "image": "Prison/banner3.jpg",
     "description": "Rank VIP + 1000 monete + 3 token a prezzo scontato."
   },
   {
@@ -89,7 +89,7 @@
     "name": "Upgrade Cella",
     "price": 7.99,
     "category": "Prison",
-    "image": "Prison/banner2.jpg",
+    "image": "Prison/banner3.jpg",
     "description": "Migliora la tua cella per ottenere più spazio di stoccaggio."
   },
   {
@@ -110,7 +110,7 @@
     "name": "Rank VIP",
     "price": 9.99,
     "category": "KitPVP OP",
-    "image": "KitPVP/banner1.jpg",
+    "image": "KitPVP/banner3.jpg",
     "description": "Accesso VIP, chat colorata e slot kit aggiuntivo."
   },
   {
@@ -118,7 +118,7 @@
     "name": "1000 Monete",
     "price": 4.99,
     "category": "KitPVP OP",
-    "image": "KitPVP/banner2.jpg",
+    "image": "KitPVP/banner3.jpg",
     "description": "Pacchetto da 1000 monete per acquistare kit e potenziamenti."
   },
   {
@@ -134,7 +134,7 @@
     "name": "Bundle Starter",
     "price": 14.99,
     "category": "KitPVP OP",
-    "image": "KitPVP/banner1.jpg",
+    "image": "KitPVP/banner3.jpg",
     "description": "Rank VIP + 1000 monete + 3 token Arena."
   },
   {
@@ -142,7 +142,7 @@
     "name": "Upgrade Kit",
     "price": 7.99,
     "category": "KitPVP OP",
-    "image": "KitPVP/banner2.jpg",
+    "image": "KitPVP/banner3.jpg",
     "description": "Kit esclusivo con armatura potenziata."
   },
   {
