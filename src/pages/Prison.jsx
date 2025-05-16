@@ -1,9 +1,9 @@
 // src/pages/Prison.jsx
 
 import React from "react";
-import img1 from "/images/Prison/banner1.jpg";
-import img2 from "/images/Prison/banner2.jpg";
-import img3 from "/images/Prison/banner3.jpg";
+import img1 from "../assets/images/Prison/banner1.jpg";
+import img2 from "../assets/images/Prison/banner2.jpg";
+import img3 from "../assets/images/Prison/banner3.jpg";
 
 export default function Prison() {
   return (

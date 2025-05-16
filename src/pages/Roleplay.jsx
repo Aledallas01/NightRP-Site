@@ -1,9 +1,9 @@
 // src/pages/Skyblock.jsx
 
 import React from "react";
-import img1 from "/images/Roleplay/banner1.jpg";
-import img2 from "/images/Roleplay/banner2.jpg";
-import img3 from "/images/Roleplay/banner3.jpg";
+import img1 from "../assets/images/Roleplay/banner1.jpg";
+import img2 from "../assets/images/Roleplay/banner2.jpg";
+import img3 from "../assets/images/Roleplay/banner3.jpg";
 
 export default function Roleplay() {
   return (

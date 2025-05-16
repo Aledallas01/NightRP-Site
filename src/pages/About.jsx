@@ -4,34 +4,34 @@ import React from "react";
 {
   /* -- Staff -- */
 }
-import AyooDen from "/images/team/AyooDen.gif";
-import Xx1Fede0xX from "/images/team/Xx1Fede0xX.webp";
-import cicciosdao from "/images/team/cicciosdao.png";
-import Gisiva2022 from "/images/team/Gisiva2022.webp";
-import XxEllie999xX from "/images/team/XxEllie999xX.webp";
-import Rumenss from "/images/team/Rumenss.webp";
+import AyooDen from "../assets/images/team/AyooDen.gif";
+import Xx1Fede0xX from "../assets/images/team/Xx1Fede0xX.webp";
+import cicciosdao from "../assets/images/team/cicciosdao.png";
+import Gisiva2022 from "../assets/images/team/Gisiva2022.webp";
+import XxEllie999xX from "../assets/images/team/XxEllie999xX.webp";
+import Rumenss from "../assets/images/team/Rumenss.webp";
 
 {
   /* -- Developer -- */
 }
-import Hert00l from "/images/team/Hert00l.webp";
-import AlyGG from "/images/team/Aly.webp";
-import Aledallas from "/images/team/Aledallas.webp";
+import Hert00l from "../assets/images/team/Hert00l.webp";
+import AlyGG from "../assets/images/team/Aly.webp";
+import Aledallas from "../assets/images/team/Aledallas.webp";
 
 {
   /* -- Moderator -- */
 }
-import ero1ne from "/images/team/ero1ne.webp";
-import Carmineitor from "/images/team/Carmineitor.png";
+import ero1ne from "../assets/images/team/ero1ne.webp";
+import Carmineitor from "../assets/images/team/Carmineitor.png";
 
 {
   /* -- Helper -- */
 }
-import AlCapone from "/images/team/AlCapone.webp";
-import FrostPngDanilo from "/images/team/FrostPngDanilo.webp";
-import Lσяєηzσ from "/images/team/Lσяєηzσ.webp";
-import Arrivatoh_ from "/images/team/Arrivatoh_.webp";
-import Calogero007 from "/images/team/Calogero007.webp";
+import AlCapone from "../assets/images/team/AlCapone.webp";
+import FrostPngDanilo from "../assets/images/team/FrostPngDanilo.webp";
+import Lσяєηzσ from "../assets/images/team/Lσяєηzσ.webp";
+import Arrivatoh_ from "../assets/images/team/Arrivatoh_.webp";
+import Calogero007 from "../assets/images/team/Calogero007.webp";
 
 export default function About() {
   return (
