@@ -164,46 +164,30 @@
     "price": 9.99,
     "category": "RolePlay",
     "image": "RolePlay/banner1.jpg",
-    "description": "Accesso VIP, chat esclusiva e privilegi RP avanzati."
+    "description": "Rank VIP+"
   },
   {
-    "id": "roleplay-monete-1000",
-    "name": "1000 Monete",
-    "price": 4.99,
+    "id": "roleplay-vip+",
+    "name": "Rank VIP+",
+    "price": 24.99,
     "category": "RolePlay",
-    "image": "RolePlay/banner2.jpg",
-    "description": "Monete per acquisti RP, oggetti e personalizzazioni."
+    "image": "RolePlay/banner1.jpg",
+    "description": "Rank VIP+"
   },
   {
-    "id": "roleplay-token-5",
-    "name": "5 Token Fazione",
-    "price": 2.49,
+    "id": "roleplay-mpv",
+    "name": "Rank MPV",
+    "price": 39.99,
     "category": "RolePlay",
-    "image": "RolePlay/banner3.jpg",
-    "description": "Token per ottenere missioni e quest esclusive."
+    "image": "RolePlay/banner1.jpg",
+    "description": "Rank MPV"
   },
   {
-    "id": "roleplay-bundle-starter",
-    "name": "Bundle Starter",
-    "price": 14.99,
+    "id": "roleplay-mpv+",
+    "name": "Rank MPV+",
+    "price": 59.99,
     "category": "RolePlay",
-    "image": "Roleplay/banner1.jpg",
-    "description": "Rank VIP + 1000 monete + 3 token Fazione."
-  },
-  {
-    "id": "roleplay-upgrade-casa",
-    "name": "Upgrade Casa",
-    "price": 7.99,
-    "category": "RolePlay",
-    "image": "Roleplay/banner2.jpg",
-    "description": "Personalizza la tua abitazione RP con decorazioni esclusive."
-  },
-  {
-    "id": "roleplay-token-10",
-    "name": "10 Token Fazione",
-    "price": 4.49,
-    "category": "RolePlay",
-    "image": "Roleplay/banner3.jpg",
-    "description": "Pacchetto da 10 token per quest di fazione extra."
+    "image": "RolePlay/banner1.jpg",
+    "description": "Rank MPV+"
   }
 ]
