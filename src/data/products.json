@@ -1,18 +1,209 @@
 [
   {
-    "id": "Rank-Vip-SkyBlock",
-    "name": "Vip",
+    "id": "skyblock-vip",
+    "name": "Rank VIP",
     "price": 9.99,
     "category": "SkyBlock",
     "image": "SkyBlock/banner1.jpg",
-    "description": "Il rank Vip per SkyBlock"
+    "description": "Accesso esclusivo a comandi VIP, chat colorata e slot aggiuntivi."
   },
   {
-    "id": "Monete-Prison",
+    "id": "skyblock-monete-1000",
+    "name": "1000 Monete",
+    "price": 4.99,
+    "category": "SkyBlock",
+    "image": "SkyBlock/banner2.jpg",
+    "description": "Pacchetto da 1000 monete per potenziare subito la tua isola."
+  },
+  {
+    "id": "skyblock-token-5",
+    "name": "5 Token Evento",
+    "price": 2.49,
+    "category": "SkyBlock",
+    "image": "SkyBlock/banner3.jpg",
+    "description": "Serie di 5 token per partecipare agli eventi settimanali."
+  },
+  {
+    "id": "skyblock-bundle-starter",
+    "name": "Bundle Starter",
+    "price": 14.99,
+    "category": "SkyBlock",
+    "image": "SkyBlock/banner1.jpg",
+    "description": "Rank VIP + 1000 monete + 3 token a un prezzo scontato."
+  },
+  {
+    "id": "skyblock-upgrade-isola",
+    "name": "Upgrade Isola",
+    "price": 7.99,
+    "category": "SkyBlock",
+    "image": "SkyBlock/banner2.jpg",
+    "description": "Sblocca un livello avanzato per aumentare lo spazio della tua isola."
+  },
+  {
+    "id": "skyblock-token-10",
+    "name": "10 Token Evento",
+    "price": 4.49,
+    "category": "SkyBlock",
+    "image": "SkyBlock/banner3.jpg",
+    "description": "Serie di 10 token per partecipare agli eventi settimanali."
+  },
+
+
+
+
+
+  {
+    "id": "prison-vip",
+    "name": "Rank VIP",
+    "price": 9.99,
+    "category": "Prison",
+    "image": "Prison/banner1.jpg",
+    "description": "Accesso VIP in Prison, chat colorata e spawn privato."
+  },
+  {
+    "id": "prison-monete-1000",
     "name": "1000 Monete",
     "price": 4.99,
     "category": "Prison",
     "image": "Prison/banner2.jpg",
-    "description": "Pacchetto di 1000 monete per Prison"
+    "description": "Pacchetto da 1000 monete per acquisti in-game immediati."
+  },
+  {
+    "id": "prison-token-5",
+    "name": "5 Token Mixer",
+    "price": 2.49,
+    "category": "Prison",
+    "image": "Prison/banner3.jpg",
+    "description": "Token per sbloccare funzioni extra nel server Prison."
+  },
+  {
+    "id": "prison-bundle-starter",
+    "name": "Bundle Starter",
+    "price": 14.99,
+    "category": "Prison",
+    "image": "Prison/banner1.jpg",
+    "description": "Rank VIP + 1000 monete + 3 token a prezzo scontato."
+  },
+  {
+    "id": "prison-upgrade-cella",
+    "name": "Upgrade Cella",
+    "price": 7.99,
+    "category": "Prison",
+    "image": "Prison/banner2.jpg",
+    "description": "Migliora la tua cella per ottenere più spazio di stoccaggio."
+  },
+  {
+    "id": "prison-token-10",
+    "name": "10 Token Mixer",
+    "price": 4.49,
+    "category": "Prison",
+    "image": "Prison/banner3.jpg",
+    "description": "Pacchetto da 10 token per sbloccare contenuti extra."
+  },
+
+
+
+
+
+  {
+    "id": "kitpvp-vip",
+    "name": "Rank VIP",
+    "price": 9.99,
+    "category": "KitPVP OP",
+    "image": "KitPVP/banner1.jpg",
+    "description": "Accesso VIP, chat colorata e slot kit aggiuntivo."
+  },
+  {
+    "id": "kitpvp-monete-1000",
+    "name": "1000 Monete",
+    "price": 4.99,
+    "category": "KitPVP OP",
+    "image": "KitPVP/banner2.jpg",
+    "description": "Pacchetto da 1000 monete per acquistare kit e potenziamenti."
+  },
+  {
+    "id": "kitpvp-token-5",
+    "name": "5 Token Arena",
+    "price": 2.49,
+    "category": "KitPVP OP",
+    "image": "KitPVP/banner3.jpg",
+    "description": "Token per sbloccare mappe e modalità aggiuntive."
+  },
+  {
+    "id": "kitpvp-bundle-starter",
+    "name": "Bundle Starter",
+    "price": 14.99,
+    "category": "KitPVP OP",
+    "image": "KitPVP/banner1.jpg",
+    "description": "Rank VIP + 1000 monete + 3 token Arena."
+  },
+  {
+    "id": "kitpvp-upgrade-kit",
+    "name": "Upgrade Kit",
+    "price": 7.99,
+    "category": "KitPVP OP",
+    "image": "KitPVP/banner2.jpg",
+    "description": "Kit esclusivo con armatura potenziata."
+  },
+  {
+    "id": "kitpvp-token-10",
+    "name": "10 Token Arena",
+    "price": 4.49,
+    "category": "KitPVP OP",
+    "image": "KitPVP/banner3.jpg",
+    "description": "Pacchetto da 10 token per mappe extra e sfide."
+  },
+
+
+
+
+  
+  {
+    "id": "roleplay-vip",
+    "name": "Rank VIP",
+    "price": 9.99,
+    "category": "RolePlay",
+    "image": "RolePlay/banner1.jpg",
+    "description": "Accesso VIP, chat esclusiva e privilegi RP avanzati."
+  },
+  {
+    "id": "roleplay-monete-1000",
+    "name": "1000 Monete",
+    "price": 4.99,
+    "category": "RolePlay",
+    "image": "RolePlay/banner2.jpg",
+    "description": "Monete per acquisti RP, oggetti e personalizzazioni."
+  },
+  {
+    "id": "roleplay-token-5",
+    "name": "5 Token Fazione",
+    "price": 2.49,
+    "category": "RolePlay",
+    "image": "RolePlay/banner3.jpg",
+    "description": "Token per ottenere missioni e quest esclusive."
+  },
+  {
+    "id": "roleplay-bundle-starter",
+    "name": "Bundle Starter",
+    "price": 14.99,
+    "category": "RolePlay",
+    "image": "RolePlay/banner1.jpg",
+    "description": "Rank VIP + 1000 monete + 3 token Fazione."
+  },
+  {
+    "id": "roleplay-upgrade-casa",
+    "name": "Upgrade Casa",
+    "price": 7.99,
+    "category": "RolePlay",
+    "image": "RolePlay/banner2.jpg",
+    "description": "Personalizza la tua abitazione RP con decorazioni esclusive."
+  },
+  {
+    "id": "roleplay-token-10",
+    "name": "10 Token Fazione",
+    "price": 4.49,
+    "category": "RolePlay",
+    "image": "RolePlay/banner3.jpg",
+    "description": "Pacchetto da 10 token per quest di fazione extra."
   }
 ]
