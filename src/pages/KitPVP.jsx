@@ -1,9 +1,9 @@
 // src/pages/KitPVP.jsx
 
 import React from "react";
-import img1 from "../assets/images/KitPVP/banner1.jpg";
-import img2 from "../assets/images/KitPVP/banner2.jpg";
-import img3 from "../assets/images/KitPVP/banner3.jpg";
+import img1 from "/images/KitPVP/banner1.jpg";
+import img2 from "/images/KitPVP/banner2.jpg";
+import img3 from "/images/KitPVP/banner3.jpg";
 
 export default function KitPVP() {
   return (

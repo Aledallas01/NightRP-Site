@@ -1,10 +1,10 @@
 // src/pages/Home.jsx
 
 import React, { useState } from "react";
-import skyImg from "../assets/images/SkyBlock/banner1.jpg";
-import kitImg from "../assets/images/KitPVP/banner1.jpg";
-import prisonImg from "../assets/images/banner.jpg";
-import roleImg from "../assets/images/banner.jpg";
+import skyImg from "/images/SkyBlock/banner1.jpg";
+import kitImg from "/images/KitPVP/banner1.jpg";
+import prisonImg from "/images/banner.jpg";
+import roleImg from "/images/banner.jpg";
 
 export default function Home() {
   const [ipButtonText, setIpButtonText] = useState("Copia IP");
