@@ -9,7 +9,7 @@ export default function Cart() {
   const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   const imageUrl = new URL(
-    `../assets/images/${item.image}`,
+    `../assets/images/${product.image}`,
     import.meta.url
   ).href;
 
