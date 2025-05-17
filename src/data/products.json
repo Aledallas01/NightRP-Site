@@ -55,7 +55,7 @@
   {
     "id": "prison-drexen",
     "name": "Rank DREXEN",
-    "price": 6.99,
+    "price": 8.00,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
     "description": "Rank DREXEN"
@@ -63,7 +63,7 @@
   {
     "id": "prison-voltrix",
     "name": "Rank VOLTRIX",
-    "price": 11.99,
+    "price": 18.00,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
     "description": "Rank VOLTRIX"
@@ -71,7 +71,7 @@
   {
     "id": "prison-aethero",
     "name": "Rank AETHERO",
-    "price": 14.49,
+    "price": 27.00,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
     "description": "Rank AETHERO"
@@ -79,7 +79,7 @@
   {
     "id": "prison-Mythro",
     "name": "Rank MYTHRO",
-    "price": 19.99,
+    "price": 40.00,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
     "description": "Rank MYTHRO"
@@ -87,7 +87,7 @@
   {
     "id": "prison-supremo",
     "name": "Rank SUPREMO",
-    "price": 26.99,
+    "price": 60.00,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
     "description": "Rank SUPREMO"
