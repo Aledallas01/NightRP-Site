@@ -13,6 +13,13 @@ export default function ProductCard({ product }) {
     import.meta.url
   ).href;
 
+  const [AddButtonText, setAddButtonText] = useState("Aggiungi");
+
+  const Aggiunto = () => {
+    setAddButtonText("Aggiunto al Carrello!");
+    setTimeout(() => setAddButtonText("Aggiungi"), 3000);
+  };
+
   return (
     <>
       {/* CARD */}
@@ -41,9 +48,10 @@ export default function ProductCard({ product }) {
             onClick={e => {
               e.stopPropagation();
               addToCart(product);
+              Aggiunto()
             }}
           >
-            Aggiungi
+            <i/> {AddButtonText}
           </button>
         </div>
       </div>
