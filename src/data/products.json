@@ -53,52 +53,44 @@
 
 
   {
-    "id": "prison-vip",
-    "name": "Rank VIP",
-    "price": 9.99,
+    "id": "prison-drexen",
+    "name": "Rank DREXEN",
+    "price": 6.99,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
-    "description": "Accesso VIP in Prison, chat colorata e spawn privato."
+    "description": "Rank DREXEN"
   },
   {
-    "id": "prison-monete-1000",
-    "name": "1000 Monete",
-    "price": 4.99,
+    "id": "prison-voltrix",
+    "name": "Rank VOLTRIX",
+    "price": 11.99,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
-    "description": "Pacchetto da 1000 monete per acquisti in-game immediati."
+    "description": "Rank VOLTRIX"
   },
   {
-    "id": "prison-token-5",
-    "name": "5 Token Mixer",
-    "price": 2.49,
+    "id": "prison-aethero",
+    "name": "Rank AETHERO",
+    "price": 14.49,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
-    "description": "Token per sbloccare funzioni extra nel server Prison."
+    "description": "Rank AETHERO"
   },
   {
-    "id": "prison-bundle-starter",
-    "name": "Bundle Starter",
-    "price": 14.99,
+    "id": "prison-Mythro",
+    "name": "Rank MYTHRO",
+    "price": 19.99,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
-    "description": "Rank VIP + 1000 monete + 3 token a prezzo scontato."
+    "description": "Rank MYTHRO"
   },
   {
-    "id": "prison-upgrade-cella",
-    "name": "Upgrade Cella",
-    "price": 7.99,
+    "id": "prison-supremo",
+    "name": "Rank SUPREMO",
+    "price": 26.99,
     "category": "Prison",
     "image": "Prison/banner3.jpg",
-    "description": "Migliora la tua cella per ottenere più spazio di stoccaggio."
-  },
-  {
-    "id": "prison-token-10",
-    "name": "10 Token Mixer",
-    "price": 4.49,
-    "category": "Prison",
-    "image": "Prison/banner3.jpg",
-    "description": "Pacchetto da 10 token per sbloccare contenuti extra."
+    "description": "Rank SUPREMO"
   },
 
 
@@ -169,7 +161,7 @@
   {
     "id": "roleplay-vip+",
     "name": "Rank VIP+",
-    "price": 24.99,
+    "price": 14.99,
     "category": "RolePlay",
     "image": "Roleplay/banner1.jpg",
     "description": "Rank VIP+"
@@ -177,7 +169,7 @@
   {
     "id": "roleplay-mpv",
     "name": "Rank MPV",
-    "price": 39.99,
+    "price": 19.99,
     "category": "RolePlay",
     "image": "Roleplay/banner1.jpg",
     "description": "Rank MPV"
@@ -185,7 +177,7 @@
   {
     "id": "roleplay-mpv+",
     "name": "Rank MPV+",
-    "price": 59.99,
+    "price": 26.99,
     "category": "RolePlay",
     "image": "Roleplay/banner1.jpg",
     "description": "Rank MPV+"
