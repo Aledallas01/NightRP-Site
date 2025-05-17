@@ -8,6 +8,11 @@ export default function Cart() {
   const { cart, removeItem, clearCart } = useContext(CartContext);
   const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
+  const imageUrl = new URL(
+    `../assets/images/${item.image}`,
+    import.meta.url
+  ).href;
+
   if (cart.length === 0) {
     return (
       <main className="cart-page empty-cart">
