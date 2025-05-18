@@ -49,11 +49,6 @@ export default function Navbar() {
           <i className="fas fa-shopping-cart" /> Store
         </a>
       </li>
-      <li>
-        <a href="/cart">
-          <i className="fas" /> Carrello
-        </a>
-      </li>
     </ul>
   </nav>
 </header>
